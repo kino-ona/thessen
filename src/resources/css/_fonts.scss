@@ -1,0 +1,56 @@
+// SpoqaHanSansNeo
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff2'),
+    url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff'),
+    url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.otf')
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2'),
+    url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff'),
+    url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.otf')
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2'),
+    url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff'),
+    url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.otf')
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2'),
+    url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff'),
+    url('../../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.otf')
+      format('opentype');
+}
+
+// Montserrat
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../../fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'),
+    url('../../fonts/Montserrat/Montserrat-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../../fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'),
+    url('../../fonts/Montserrat/Montserrat-Bold.woff') format('woff');
+}

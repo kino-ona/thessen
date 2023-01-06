@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="ko-KR">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <link href="../resources/benefits_search/css/common.css" media="screen" rel="stylesheet">
+  <title>더쎈카드</title>
+</head>
+
+<body>
+
+  <!-- popup -->
+  <div id="pop-terms" class="ly-pop ly-full ly-terms ndim">
+    <div class="wrap">
+      <section class="content">
+        <header class="header">
+          <h2>마케팅 수신 동의(선택)</h2>
+          <button type="button" class="btn-close" onclick="UI.popupClose.init('terms');"><i>화면 닫기</i></button>
+        </header>
+        <div class="terms-wrap">
+          <pre>
+            주식회사 헥토 이노베이션(이하 "화사")이 운영하는 더쎈카드 서비스(이하 "서비스")에서 신용정보의 이용 및 보호에 관한 법률, 개인정보보호법 및 정보통신망 이용촉진 정보보호 등에 관한 법률 등 관계법령에 따라 광고성 정보를 전송하기 위해 이용자의 사전 수신 동의를 받고 있습니다. 개인정보보호법 제22조 제5항에 의해 선택정보 사항에 대해서는 기재하지 않아도 서비스를 이용하실 수 있습니다.
+
+            <h2>제1조 마케팅 및 광고에 개인정보 활용</h2>① 활용목적
+            가. 신규 기능 개발 및 맞춤 서비스 제공
+            나. 새로운 기능의 안내
+            다. 할인 및 쿠폰, 이벤트 등의 광고성 정보 제공
+            ② 활용하는 개인정보 항목
+            가. 로그인 식별값, 이름, 휴대폰번호, PUSH 토큰
+            ③ 개인정보 이용 기간
+            가. 서비스 해지 전 또는 마케팅수신동의 철회 전까지
+
+            <h2>제2조. 마케팅 정보 제공</h2>① 회사는 서비스를 운용하는 과정에서 각종 정보를 푸시알림, SMS 및 카카오 친구톡 등의 방법으로 회원에게 제공할 수 있습니다. 단, 광고성 정보 이외에 의무적으로 안내되어야 하는 정보성 내용은 수신동의 여부와 무관하게 제공합니다.
+
+            <h2>제3조. 수신 동의 및 철회</h2>① 수신 동의 이후에도 의사에 따라 동의를 철회할 수 있으며, 수신을 동의하지 않아도 회사에서 제공하는 기본적인 서비스를 이용할 수 있으나 회사가 제공하는 마케팅 정보를 수신하지 못할 수 있습니다. 고객이 본 수신 동의를 철회하고자 할 경우 앱내 알림 설정 메뉴(설정-알림성정)를 통하여 수신 동의 철회를 요청할 수 있습니다. 또한 향후 마케팅정보 수신에 새롭게 동의하고자 할 경우 앱내 알림 설정에서 동의하실 수 있습니다.
+
+            시행일자 : 2022년 5월 26일
+          </pre>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- //popup -->
+
+  <script src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../resources/benefits_search/js/design.js"></script>
+  <script>
+    $(function () {
+      UI.popupOpen.init('terms');
+    })
+  </script>
+
+</body>
+
+</html>

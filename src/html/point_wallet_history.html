@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="ko-KR">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <link href="../resources/css/common.css" media="screen" rel="stylesheet">
+  <title>더쎈카드</title>
+</head>
+
+<body>
+  <!-- [D] 팝업 노출 제어 - design.js > UI.popupOpen/Close -->
+  <div id="pop-point-history" class="ly-full ndim">
+    <div class="container">
+      <div class="content normal-flow" style="padding: 0 2rem;">
+        <div class="history-title-header">
+          <div class="select-box">
+            <span class="year">2022년</span>
+            <span class="month">11월</span>
+            <select>
+              <option value="2022년 12월">2022년 12월</option>
+              <option value="2022년 11월">2022년 11월</option>
+              <option value="2022년 10월">2022년 10월</option>
+              <option value="2022년 09월">2022년 09월</option>
+              <option value="2022년 08월">2022년 08월</option>
+              <option value="2022년 07월">2022년 07월</option>
+              <option value="2022년 06월">2022년 06월</option>
+              <option value="2022년 05월">2022년 05월</option>
+              <option value="2022년 04월">2022년 04월</option>
+              <option value="2022년 03월">2022년 03월</option>
+              <option value="2022년 02월">2022년 02월</option>
+              <option value="2022년 01월">2022년 01월</option>
+            </select>
+          </div>
+          <button type="button" class="btn-text">포인트사용</button>
+        </div>
+        <h2 class="history-title"><span class="blind">보유 포인트</span>10,240P</h2>
+        <div class="tablist-box">
+          <button type="button" aria-selected="true">전체</button>
+          <button type="button" aria-selected="false">적립</button>
+          <button type="button" aria-selected="false">사용</button>
+        </div>
+        <ul class="history-list">
+          <li class="history-item">
+            <div class="left-area">
+              <p class="reason">
+                <span class="basis">카드수익금</span>
+                <span class="card">삼성카드 탭탭 O</span>
+                <span class="type">적립</span>
+              </p>
+              <div class="date-time">
+                <span class="date">2022-11-01</span>
+                <span class="time">15:20</span>
+              </div>
+            </div>
+            <div class="right-area">
+              <span class="price plus">+ 500P</span>
+              <span class="balance">10,500 P</span>
+            </div>
+          </li>
+          <li class="history-item">
+            <div class="left-area">
+              <p class="reason">
+                <span class="basis">네이버페이</span>
+                <span class="type">사용</span>
+              </p>
+              <div class="date-time">
+                <span class="date">2022-11-01</span>
+                <span class="time">15:20</span>
+              </div>
+            </div>
+            <div class="right-area">
+              <span class="price minus">- 1,000P</span>
+              <span class="balance">10,500 P</span>
+            </div>
+          </li>
+          <li class="history-item">
+            <div class="left-area">
+              <p class="reason">
+                <span class="basis">카드수익금</span>
+                <span class="card">굿데이카드</span>
+                <span class="type">적립</span>
+              </p>
+              <div class="date-time">
+                <span class="date">2022-11-01</span>
+                <span class="time">15:20</span>
+              </div>
+            </div>
+            <div class="right-area">
+              <span class="price plus">+ 500P</span>
+              <span class="balance">10,500 P</span>
+            </div>
+          </li>
+          <li class="history-item">
+            <div class="left-area">
+              <p class="reason">
+                <span class="basis">GS25</span>
+                <span class="type">사용</span>
+              </p>
+              <div class="date-time">
+                <span class="date">2022-11-01</span>
+                <span class="time">15:20</span>
+              </div>
+            </div>
+            <div class="right-area">
+              <span class="price minus">- 1,000P</span>
+              <span class="balance">10,500 P</span>
+            </div>
+          </li>
+          <li class="history-item">
+            <div class="left-area">
+              <p class="reason">
+                <span class="basis">카드수익금</span>
+                <span class="card">마이핏카드</span>
+                <span class="type">적립</span>
+              </p>
+              <div class="date-time">
+                <span class="date">2022-11-01</span>
+                <span class="time">15:20</span>
+              </div>
+            </div>
+            <div class="right-area">
+              <span class="price plus">+ 500P</span>
+              <span class="balance">10,500 P</span>
+            </div>
+          </li>
+        </ul>
+        <button type="button" class="btn-view-more">더보기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../resources/js/design.js"></script>
+  <script>
+    const selectElem = document.querySelector('.select-box select');
+    const yearElem = document.querySelector('.select-box .year');
+    const monthElem = document.querySelector('.select-box .month');
+
+    selectElem.addEventListener('change', function (e) {
+      yearElem.innerText = e.target.value.split(' ')[0];
+      monthElem.innerText = e.target.value.split(' ')[1];
+    })
+
+    const tabButtonElemList = document.querySelectorAll('.tablist-box button');
+
+    tabButtonElemList.forEach(function (e) {
+      e.addEventListener('click', function (e) {
+        tabButtonElemList.forEach(function (e) {
+          e.ariaSelected = 'false';
+        });
+        e.currentTarget.ariaSelected = 'true';
+      })
+    });
+
+    UI.popupOpen.init('point-history');
+  </script>
+</body>
+
+</html>

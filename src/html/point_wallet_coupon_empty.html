@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="ko-KR">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <link href="../resources/css/common.css" media="screen" rel="stylesheet">
+  <title>더쎈카드</title>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <!-- container -->
+    <div id="container" class="point-wallet-info">
+      <section class="content">
+        <div class="content-title-box">
+          <h2 class="content-title main">총 보유 포인트</h2>
+          <button type="button" aria-label="설정 버튼" class="btn-setting-wallet">설정</button>
+        </div>
+        <div class="user-point-wrap">
+          <strong class="user-point">+<em>12,679</em><span>P</span></strong>
+        </div>
+        <ul class="user-point-info">
+          <li class="user-point-item">
+            <span class="point-type">적립 포인트</span>
+            <span class="point-num plus">+ 16,247</span>
+          </li>
+          <li class="user-point-item">
+            <span class="point-type">사용 포인트</span>
+            <span class="point-num minus">- 16,247</span>
+          </li>
+          <li class="user-point-item">
+            <span class="point-type">소멸예정 포인트</span>
+            <span class="point-num">16,247</span>
+          </li>
+        </ul>
+      </section>
+      <section class="content tab-menu">
+        <div class="tablist-box">
+          <button type="button" aria-selected="true">내 지갑</button>
+          <button type="button" aria-selected="false">포인트 사용</button>
+          <button type="button" aria-selected="false">쿠폰함</button>
+        </div>
+      </section>
+      <section class="content">
+        <div class="tablist-box basic">
+          <button type="button" aria-selected="true">전체</button>
+          <button type="button" aria-selected="false">미사용</button>
+          <button type="button" aria-selected="false">사용/기간만료</button>
+        </div>
+        <p class="coupon-list-empty">쿠폰이 없습니다.</p>
+      </section>
+    </div>
+    <!-- //container -->
+  </div>
+
+  <script src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../resources/js/design.js"></script>
+  <script>
+    const tabButtonElemList = document.querySelectorAll('.tablist-box button');
+    tabButtonElemList.forEach(function (e) {
+      e.addEventListener('click', function (e) {
+        for (let elem of e.currentTarget.parentElement.children) {
+          elem.ariaSelected = 'false';
+        }
+        e.currentTarget.ariaSelected = 'true';
+      })
+    });
+    // [23.01.02] 스크롤 이벤트
+    const contentTitleElem = document.querySelector('.content-title.main').cloneNode(true);
+    const userPointElem = document.querySelector('.user-point').cloneNode(true);
+    const tabBoxElem = document.querySelector('.content.tab-menu');
+    tabBoxElem.insertAdjacentElement('afterbegin', userPointElem);
+    tabBoxElem.insertAdjacentElement('afterbegin', contentTitleElem);
+    let documtentScrollTop;
+    let tabBoxScrollTop = tabBoxElem.offsetTop;
+    window.addEventListener('scroll', function () {
+      documtentScrollTop = document.documentElement.scrollTop;
+      if (documtentScrollTop > tabBoxScrollTop) {
+        tabBoxElem.classList.add('fixed');
+      } else {
+        tabBoxElem.classList.remove('fixed');
+      }
+    })
+  </script>
+</body>
+
+</html>

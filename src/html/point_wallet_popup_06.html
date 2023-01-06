@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="ko-KR">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <link href="../resources/css/common.css" media="screen" rel="stylesheet">
+  <title>더쎈카드</title>
+</head>
+
+<body style="overflow: hidden;">
+  <!-- [D] 팝업 노출 제어 - design.js > UI.popupOpen/Close -->
+  <div id="pop-pop06" class="ly-full ndim">
+    <div class="container">
+      <div class="content">
+        <div class="save-info bonus">
+          <span>카드수익금 적립</span>
+          <strong>7일차 성공!</strong>
+          <lottie-player class="lottie-wrap" src="../resources/images/celebration.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        </div>
+        <div class="save-desc bonus">
+          <p>카드 수익금 <em>100P +</em> 추가 보너스 <em>100P</em>로</p>
+          <strong>총 <em>200P</em> 적립 완료</strong>
+        </div>
+      </div>
+      <div class="btn-wrap">
+        <p class="tip-desc">14,21,28일차에도 보너스가 적립되요!</p>
+        <button type="button" class="btn secondary" onclick="UI.popupClose.init('pop06');">닫기</button>
+        <button type="button" class="btn primary">카드 수익금 확인</button>
+      </div>
+    </div>
+  </div>
+  <script src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../resources/js/design.js"></script>
+  <script src="../resources/js/lottie-player.js"></script>
+  <script>
+    UI.popupOpen.init('pop06');
+  </script>
+</body>
+
+</html>

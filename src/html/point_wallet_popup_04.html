@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="ko-KR">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <link href="../resources/css/common.css" media="screen" rel="stylesheet">
+  <title>더쎈카드</title>
+</head>
+
+<body style="overflow: hidden;">
+  <!-- [D] 팝업 노출 제어 - design.js > UI.popupOpen/Close -->
+  <div id="pop-pop04" class="drawer ndim">
+    <div class="drawer-paper wrap">
+      <div class="drawer-content term">
+        <ul class="term-chk-list">
+          <li>
+            <span class="chk">
+              <input type="checkbox" name="terms" id="terms01">
+              <label for="terms01">포인트몰 이용약관 동의[필수]</label>
+            </span>
+            <button type="button" class="btn-link"><span class="blind">약관 상세보기</span></button>
+          </li>
+          <li>
+            <span class="chk">
+              <input type="checkbox" name="terms" id="terms02">
+              <label for="terms02">마케팅 수신 동의(선택)</label>
+            </span>
+            <button type="button" class="btn-link"><span class="blind">약관 상세보기</span></button>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn primary">교환신청</button>
+      </div>
+    </div>
+  </div>
+  <script src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../resources/js/design.js"></script>
+  <script>
+    UI.popupOpen.init('pop04');
+  </script>
+</body>
+
+</html>

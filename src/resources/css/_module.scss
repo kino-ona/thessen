@@ -1,0 +1,133 @@
+$baseFontSize: 10;
+@function px($pixels, $context: $baseFontSize) {
+  @return ($pixels) / $context + rem;
+}
+
+$urlImg: '../images/';
+$default_color: #111;
+
+// common
+@mixin blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin clear {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin wfn {
+  font-family: 'Noto Sans KR', Sans-serif;
+}
+
+@mixin wfr {
+  font-family: 'NunitoSans', sans-serif;
+}
+
+@mixin bgf($ps: false, $v: null) {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  color: transparent;
+  white-space: nowrap;
+  text-indent: -1000rem;
+  font-size: 1px;
+  @if $ps {
+    background-size: $v auto;
+  } @else {
+    background-size: 100% 100%;
+  }
+}
+
+@mixin svgfill($c: null, $img: null) {
+  background-color: $c;
+  mask: url($urlImg + $img) no-repeat 0 0;
+}
+
+@mixin elip($ty) {
+  line-height: 1.35;
+  @if $ty == 'l1' {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    max-width: 100%;
+  } @else if $ty == 'l2' {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+  }
+}
+
+@mixin checkbox {
+  display: inline-block;
+  position: relative;
+  input {
+    @include blind;
+  }
+  input + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+@mixin checkToggle {
+  position: relative;
+  display: inline-block;
+  width: px(48);
+  height: px(28);
+  background-color: #ddd;
+  border-radius: px(14);
+  &,
+  &:before {
+    transition: 0.25s;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: px(3);
+    left: px(3);
+    width: px(22);
+    height: px(22);
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  &:checked {
+    background-color: #3383fd;
+    &:before {
+      transform: translateX(2rem);
+    }
+  }
+}
+
+// media
+@mixin mq($screen-width) {
+  @if $screen-width == 'small' {
+    @media all and (max-width: 320px) {
+      @content;
+    }
+  } @else if $screen-width == 'fold' {
+    @media all and (min-width: 640px) {
+      @content;
+    }
+  }
+}

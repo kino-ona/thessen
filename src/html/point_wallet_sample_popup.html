@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="ko-KR">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <link href="../resources/css/common.css" media="screen" rel="stylesheet">
+  <title>더쎈카드</title>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <!-- header -->
+    <!-- <header id="header" data-ui-fixed="top">
+      <h1 class="page-tit">더쎈포인트 지갑</h1>
+      <button type="button" class="btn-back"><i></i></button>
+    </header> -->
+    <!-- //header -->
+    <!-- container -->
+    <div id="container" class="point-wallet-info">
+      <section class="content">
+        <div class="content-title-box">
+          <h2 class="content-title main">총 보유 포인트</h2>
+          <button type="button" aria-label="설정 버튼" class="btn-setting-wallet">설정</button>
+        </div>
+        <div class="user-point-wrap">
+          <strong class="user-point">+<em>12,679</em><span>P</span></strong>
+        </div>
+        <ul class="user-point-info">
+          <li class="user-point-item">
+            <span class="point-type">적립 포인트</span>
+            <span class="point-num plus">+ 16,247</span>
+          </li>
+          <li class="user-point-item">
+            <span class="point-type">사용 포인트</span>
+            <span class="point-num minus">- 16,247</span>
+          </li>
+          <li class="user-point-item">
+            <span class="point-type">소멸예정 포인트</span>
+            <span class="point-num">16,247</span>
+          </li>
+        </ul>
+      </section>
+      <section class="content tab-menu">
+        <div class="tablist-box">
+          <button type="button" aria-selected="true">내 지갑</button>
+          <button type="button" aria-selected="false">포인트 사용</button>
+          <button type="button" aria-selected="false">쿠폰함</button>
+        </div>
+      </section>
+      <section class="content">
+        <h2 class="content-title" style="padding-top: 2.5rem;">매월 스탬프 보너스</h2>
+        <div class="stamp-history-header">
+          <div class="stamp-set-month">
+            <button type="button" class="btn-set-month prev"></button>
+            <span class="stamp-month">12월</span>
+            <button type="button" class="btn-set-month next" disabled></button>
+          </div>
+          <div class="stamp-summary">
+            <span class="get-num">8회</span><span class="total-num">/ 28회</span>
+          </div>
+        </div>
+        <div class="stamp-history-content">
+          <!-- [23.01.02] 스탬프 텍스트 수정 -->
+          <div class="stamp-list-wrap" style="height: 13.4rem;">
+            <ul class="stamp-list">
+              <li class="stamp-item">1일</li>
+              <li class="stamp-item">2일</li>
+              <li class="stamp-item">3일</li>
+            </ul>
+            <ul class="stamp-list even">
+              <!-- [D] 적립 시 save 클래스 추가 -->
+              <li class="stamp-item save">4일<br>적립</li>
+              <li class="stamp-item">5일</li>
+              <li class="stamp-item">6일</li>
+              <li class="stamp-item save">100P</li>
+            </ul>
+            <ul class="stamp-list">
+              <li class="stamp-item">8일</li>
+              <li class="stamp-item">9일</li>
+              <li class="stamp-item">10일</li>
+            </ul>
+            <ul class="stamp-list even">
+              <li class="stamp-item">11일</li>
+              <li class="stamp-item">12일</li>
+              <li class="stamp-item">13일</li>
+              <li class="stamp-item">100P</li>
+            </ul>
+            <ul class="stamp-list">
+              <li class="stamp-item">15일</li>
+              <li class="stamp-item">16일</li>
+              <li class="stamp-item">17일</li>
+            </ul>
+            <ul class="stamp-list even">
+              <li class="stamp-item">18일</li>
+              <li class="stamp-item">19일</li>
+              <li class="stamp-item">20일</li>
+              <li class="stamp-item">100P</li>
+            </ul>
+            <ul class="stamp-list">
+              <li class="stamp-item">22일</li>
+              <li class="stamp-item">23일</li>
+              <li class="stamp-item">24일</li>
+            </ul>
+            <ul class="stamp-list even">
+              <li class="stamp-item">25일</li>
+              <li class="stamp-item">26일</li>
+              <li class="stamp-item">27일</li>
+              <li class="stamp-item">100P</li>
+            </ul>
+          </div>
+          <!-- // [23.01.02] 스탬프 텍스트 수정 -->
+          <div class="btn-view-stamp-box">
+            <button class="btn-view-stamp">더보기</button>
+          </div>
+        </div>
+      </section>
+      <section class="content rcmd-bonus">
+        <h2 class="content-title" style="padding-top: 1rem;">친구 추천 보너스 포인트</h2>
+        <div class="rcmd-top">
+          <img class="img-hands" src="../resources/images/img_hands.png" alt="">
+          <p>친구에게 더쎈 포인트를 추천하면<br>친구도 나도 1,000P 받을 수 있어요!</p>
+          <img class="img-point" src="../resources/images/img_rcmd_point.png" alt="">
+        </div>
+        <div class="rcmd-code-box">
+          <div class="rcmd-code-top">
+            <span class="rcmd-code-text">나의 초대코드</span>
+            <div class="user-rcmd-code-wrap">
+              <span class="user-rcmd-code">20NF9KN2</span>
+              <button type="button" class="btn-code-copy">
+                <img src="../resources/images/icon_copy.svg" alt="">
+                복사
+              </button>
+            </div>
+          </div>
+          <button type="button" class="btn-user-invite">초대하기</button>
+        </div>
+        <div class="rcmd-code-input-box">
+          <strong>친구 초대받고 오신분</strong>
+          <p>초대코드 입력하고 포인트 받기</p>
+          <div class="user-input-box">
+            <input type="text" placeholder="친구 초대코드 입력">
+            <button type="button" class="btn-input-check">확인</button>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="content-title-wrap">
+          <h2 class="content-title sub">포인트 입출금 내역</h2>
+          <span class="content-desc">최근 12개월</span>
+        </div>
+        <ul class="point-history">
+          <li class="point-history-item">
+            <span class="month">2022년 11월</span>
+            <span class="num">16,400P</span>
+          </li>
+          <li class="point-history-item">
+            <span class="month">2022년 10월</span>
+            <span class="num minus">- 400P</span>
+          </li>
+          <li class="point-history-item">
+            <span class="month">2022년 09월</span>
+            <span class="num">6,400P</span>
+          </li>
+          <li class="point-history-item">
+            <span class="month">2022년 08월</span>
+            <span class="num">11,400P</span>
+          </li>
+          <li class="point-history-item">
+            <span class="month">2022년 07월</span>
+            <span class="num">4,400P</span>
+          </li>
+          <li class="point-history-item">
+            <span class="month">2022년 06월</span>
+            <span class="num">9,400P</span>
+          </li>
+        </ul>
+        <button type="button" class="btn-view-more">더보기</button>
+      </section>
+      <!-- [23.01.02] 하단 문구 추가 -->
+      <section class="content notice">
+        <details>
+          <summary>1. 더쎈포인트 사용 주의 사항 <span class="open-text">[펼쳐보기]</span><span class="close-text">[닫기]</span></summary>
+          <ul>
+            <li>더쎈포인트(이하 '포인트')는 카드수익금, 친구추천 포인트, 보너스 포인트 등 더쎈카드가 정책에 따라 고객님에게 무상으로 부여하여 더쎈카드 앱 내에서 제휴된 다양한 컨텐츠를 이용, 구매하실 수 있도록 하는 가상의 데이터를 의미합니다.</li>
+            <li>고객님이 받으신 결제건의 카드수익금이 승인거절, 승인취소, 부분취소, 매입취소, 반품/환불 등의 사유로 카드 사용이 정상 처리되지 않거나 포인트 적립 조건을 위반하는 등 포인트 적립 조건을 충족하지 못한 경우에는 적립된 포인트는 회수될 수 있습니다.</li>
+            <li>포인트 지급 및 적립된 포인트는 더쎈카드 및 제휴사의 사정으로 사전고지 없이 중단되거나 변경 될 수 있습니다.</li>
+            <li>포인트를 부정한 방법으로 적립하거나 사용하는 경우 당사 이용약관에 따라 제재를 받으실 수 있습니다.</li>
+            <li>포인트 사용기한은 지급일 기준 만 1년입니다. 단, 더쎈카드 정책에 따라 포인트 사용기한은 단축될 수 있습니다.</li>
+            <li>자세한 내용은 설정 영역의 1:1 문의를 통해서 문의하시면 친절하게 안내해 드립니다.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>2. 카드수익금(포인트) 안내 <span class="open-text">[펼쳐보기]</span><span class="close-text">[닫기]</span></summary>
+          <ul>
+            <li>더쎈카드 DB 및 혜택 계산 산출 기준에 의거 고객이 보유한 카드 중 마이데이터로 연동된 카드의 혜택 금액을 계산 추출하여 표시하고 가장 혜택이 좋은 카드로 결제 했을 때 카드수익금(포인트)을 지급 합니다.</li>
+            <li>혜택계산 산출 기준, 고객이 보유 중인 카드사에서 설정한 혜택금의 숫자 크기가 가장 큰 카드를 추천카드로 선정합니다.</li>
+            <li>동일금액의 혜택 숫자가 산출될 경우 2개의 카드가 함께 추천될 수 있습니다. (카드 결제 할인과 혜택금은 동률계산)<br>→ 결제 카드가 다른 카드와 함께 추천된 경우 결제 카드로 결제시에도 카드수익금 (포인트)는 지급됩니다.</li>
+            <li>혜택금은 할인 금액(원), 적립금(P), 마일리지(M)으로 구분되며 혜택금 간의 우선 조건은 없습니다. (혜택금의 숫자와 카드 결제 할인 비율을 모두 비교해 숫자가 가장 큰 혜택으로 추천)</li>
+            <li>카드사별로 제시하는 프로모션, 제휴, 특별 혜택의 일시적인 이벤트 등은 혜택 계산 산출 기준에 포함되지 않습니다.</li>
+            <li>고객님이 받으신 결제 건의 카드수익금(포인트)은 승인거절, 승인취소, 부분취소, 매입취소, 반품/환불 등의 사유로 카드 사용이 정상 처리되지 않는 등 카드수익금 적립 조건을 충족하지 못한 경우에는 회수될 수 있습니다.</li>
+            <li>카드사 정책 변경이나, 업데이트 지연 등으로 인해 실제 카드 결제 혜택과 차이가 발생할 수 있으며, 더쎈카드는 더쎈카드 DB 및 혜택 계산 산출기준의 오류로 인한 카드수익금(포인트) 미지급에 대해 책임을 지지 않습니다.</li>
+            <li>카드수익금 포인트 사용기한은 지급일 기준 만 1년입니다. 단, 더쎈카드 정책에 따라 포인트 사용기한은 단축될 수 있습니다.</li>
+            <li>포인트 적립에 오류가 있거나 문의 사항은 설정영역의 1:1 문의센터로 문의 부탁 드립니다.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>3. 친구 추천 포인트 안내 <span class="open-text">[펼쳐보기]</span><span class="close-text">[닫기]</span></summary>
+          <ul>
+            <li>신규 고객이 회원 가입시 친구 추천을 코드를 입력할 경우 친구를 추천한 코드 소유자 (추천인)에게 1,000P 를 지급합니다.</li>
+            <li>추천을 통해 가입하여 코드를 입력한 신규 가입 고객에게 1,000P를 지급합니다.</li>
+            <li>친구 추천 포인트를 부정한 방법으로 적립하는 경우, 오류로 포인트가 적립되는 경우 등에는 해당 적립 포인트가 회수될 수 있으며, 경우에 따라 이용자 계정이 정지될 수도 있습니다.</li>
+            <li>친구추천을 통한 포인트 적립 이벤트는 사전 공지 없이종료되거나 적립 포인트가 변경될 수 있습니다.</li>
+            <li>친구추천 포인트 사용기한은 지급일 기준 만 1년입니다. 단, 더쎈카드 정책에 따라 포인트 사용기한은 단축될 수 있습니다.</li>
+            <li>포인트 적립에 오류가 있거나 문의 사항은 설정영역의 1:1 문의센터로 문의 부탁 드립니다.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>4. 보너스 포인트 유의 사항 안내 <span class="open-text">[펼쳐보기]</span><span class="close-text">[닫기]</span></summary>
+          <ul>
+            <li>보너스 포인트는 고객님의 포인트 적립 횟수에 따른 포인트 적립 목표를 달성한 경우( 포인트를 7번 적립한 경우 매회 지급) 지급됩니다.</li>
+            <li>보너스 포인트 사용기한은 지급일 기준 만 1년입니다. 단, 더쎈카드 정책에 따라 포인트 사용기한은 단축될 수 있습니다.</li>
+            <li>비정상적인 방법으로 이벤트에 참여하시는 고객님에게는 보너스 포인트 지급이 중단되며, 기존 적립 포인트가 회수될 수 있습니다.</li>
+            <li>보너스 포인트 지급 또는 지급된 보너스 포인트는 회사 사정에 따라 사전 공지 없이 변경될 수도 있음을 알려드립니다.</li>
+            <li>포인트 적립에 오류가 있거나 문의 사항은 설정영역의 1:1 문의센터로 문의 부탁 드립니다.</li>
+          </ul>
+        </details>
+      </section>
+      <!-- // [23.01.02] 하단 문구 추가 -->
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- [23.01.03]  -->
+  <div id="pop-pop05" class="ly-full ndim">
+    <div class="container">
+      <div class="content">
+        <div class="save-info">
+          <span>카드수익금 적립</span>
+          <strong>1일차</strong>
+          <p><em>500P</em> 적립 완료</p>
+          <lottie-player class="lottie-wrap" src="../resources/images/celebration.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        </div>
+        <div class="save-desc">
+          <p>앞으로 <em>6일</em>만<br>더 적립하면 보너스 <em>100P</em> 추가</p>
+        </div>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn secondary" onclick="UI.popupClose.init('pop05');">닫기</button>
+        <button type="button" class="btn primary">카드 수익금 확인</button>
+      </div>
+    </div>
+  </div>
+  <script src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../resources/js/design.js"></script>
+  <script src="../resources/js/lottie-player.js"></script>
+  <script>
+    // 탭버튼 클릭 이벤트
+    const tabButtonElemList = document.querySelectorAll('.tablist-box button');
+    tabButtonElemList.forEach(function (e) {
+      e.addEventListener('click', function (e) {
+        for (let elem of e.currentTarget.parentElement.children) {
+          elem.ariaSelected = 'false';
+        }
+        e.currentTarget.ariaSelected = 'true';
+      })
+    });
+    // 스탬프 더보기 버튼 이벤트
+    const viewStampBtn = document.querySelector('.btn-view-stamp');
+    const stampList = document.querySelector('.stamp-list-wrap');
+    let viewCount = 1;
+    viewStampBtn.addEventListener('click', function () {
+      viewCount++;
+      if (viewCount === 2) {
+        stampList.style.height = '28rem';
+      } else if (viewCount === 3) {
+        stampList.style.height = '42.4rem';
+      } else if (viewCount === 4) {
+        stampList.style.height = 'auto';
+        viewStampBtn.style.display = 'none';
+      }
+    });
+    // [23.01.02] 스크롤 이벤트
+    const contentTitleElem = document.querySelector('.content-title.main').cloneNode(true);
+    const userPointElem = document.querySelector('.user-point').cloneNode(true);
+    const tabBoxElem = document.querySelector('.content.tab-menu');
+    tabBoxElem.insertAdjacentElement('afterbegin', userPointElem);
+    tabBoxElem.insertAdjacentElement('afterbegin', contentTitleElem);
+    let documtentScrollTop;
+    let tabBoxScrollTop = tabBoxElem.offsetTop;
+    window.addEventListener('scroll', function () {
+      documtentScrollTop = document.documentElement.scrollTop;
+      if (documtentScrollTop > tabBoxScrollTop) {
+        tabBoxElem.classList.add('fixed');
+      } else {
+        tabBoxElem.classList.remove('fixed');
+      }
+    })
+    // 카드수익금 팝업
+    UI.popupOpen.init('pop05');
+  </script>
+</body>
+
+</html>

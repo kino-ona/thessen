@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="ko-KR">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <link href="../resources/css/common.css" media="screen" rel="stylesheet">
+  <title>더쎈카드</title>
+</head>
+
+<body style="overflow: hidden;">
+  <!-- [D] 팝업 노출 제어 - design.js > UI.popupOpen/Close -->
+  <div id="pop-pop02" class="drawer ly-drawer">
+    <div class="drawer-paper wrap">
+      <div class="drawer-content alert">
+        <h2 class="title">쿠폰 발급 신청 완료</h2>
+        <p class="desc">72시간 내 쿠폰함으로 지급됩니다.</p>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" onclick="UI.popupClose.init('pop02');" class="btn primary">확인</button>
+      </div>
+    </div>
+  </div>
+  <script src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../resources/js/design.js"></script>
+  <script>
+    UI.popupOpen.init('pop02');
+  </script>
+</body>
+
+</html>
