@@ -1,6 +1,8 @@
+@use "sass:math";
+
 $baseFontSize: 10;
 @function px($pixels, $context: $baseFontSize) {
-  @return ($pixels) / $context + rem;
+  @return math.div($pixels, $context) + rem;
 }
 
 $urlImg: '../images/';
@@ -29,6 +31,32 @@ $default_color: #111;
 @mixin wfr {
   font-family: 'NunitoSans', sans-serif;
 }
+
+@mixin primary-color {
+  color: #3383fd;
+}
+@mixin secondary-color {
+  color: #FD9433;
+}
+
+@mixin ellipse($line) {
+	@if ($line > 1) {
+		white-space:normal;
+		word-wrap:break-word;
+		display:-webkit-box;
+		-webkit-line-clamp:$line;
+		-webkit-box-orient:vertical;
+	} @else {
+		white-space:normal;
+		word-wrap:break-word;
+		display:-webkit-box;
+		-webkit-line-clamp:$line;
+		-webkit-box-orient:vertical;
+	}
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
 
 @mixin bgf($ps: false, $v: null) {
   display: inline-block;

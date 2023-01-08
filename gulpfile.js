@@ -14,7 +14,7 @@ const
 		html: 'src/**/*.html',
 		css: 'src/**/css/*.scss',
 		js: 'src/**/js/*.js',
-		img: 'src/**/images/*{jpg,gif,png,svg}',
+		img: 'src/**/images/**/*{jpg,gif,png,svg}',
 		inc: 'src/**/inc/*.inc'
 	},
 	dist = {
