@@ -212,7 +212,9 @@
       padding: px(40) px(20);
       background-color: #F4F6F8;
       border-radius: px(24);
-
+      .content-title-box {
+        padding-bottom: px(24);
+      }
       .cardcorp-list {
         display: flex;
         flex-direction: row;
@@ -220,12 +222,24 @@
       }
 
       .list-item {
+        position: relative;
         display: block;
-        width: calc((100%/4) - px(11));
-        height: calc((100%/4));
-        margin: px(5.5);
+        min-width: px(69);
+        min-height: px(69);
+        width: calc(25% - px(9));
+        padding-top: calc(25% - px(9));
+        margin: px(5.5) px(11) px(5.5) 0;
         background-color: #ffffff;
         border-radius: px(20);
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+        > div {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform:translate(-50%, -50%);
+        }
       }
     } 
   }
