@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
   <div id="wrap">
     <!-- header -->
     <!-- <header id="header" data-ui-fixed="top">
@@ -117,13 +116,118 @@
           </div>
         </div>
       </section>
+      <button type="button" class="btn-view-more">더보기</button>
+
+      <section class="content look-event-swipe">
+        <div id="eventSwipe" class="swiper event-swipe">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="event-link">
+                <div class="event-figure"><img src="../../resources/images/dummy/@card01.png"></div>
+                <div class="event-info">
+                  <p class="info-name">현대 SSG 쓱 망고</p>
+                  <p class="info-desc">
+                    지금 신청하면 <span>적립 10%혜택</span>을 받을 수 있어요
+                  </p>
+                </div>
+                <p class="benefit-tag">
+                  <span>#항공마일리지</span>
+                  <span>#외식</span>
+                  <span>#배달</span>
+                </p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="event-link">
+                <div class="event-figure"><img src="../../resources/images/dummy/@card02.png"></div>
+                <div class="event-info">
+                  <p class="info-name">현대 SSG 쓱 망고</p>
+                  <p class="info-desc">
+                    지금 신청하면 <span>적립 10%혜택</span>을 받을 수 있어요
+                  </p>
+                </div>
+                <p class="benefit-tag">
+                  <span>#항공마일리지</span>
+                  <span>#외식</span>
+                  <span>#배달</span>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="content cardcorp-content">
+        <div class="content-title-box">
+          <h2 class="content-title main">
+            카드사별 모아보기
+          </h2>
+          <div class="btn-wrap">
+            <a href="#" class="link">지난 이벤트 확인</a>
+          </div>
+        </div>
+        <div class="cardcorp-list">
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_shinhan.svg"></p>
+            <p class="item-name">신한</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_samsung.svg"></p>
+            <p class="item-name">삼성</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_kookmin.svg"></p>
+            <p class="item-name">국민</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_hana.svg"></p>
+            <p class="item-name">하나</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_ibk.svg"></p>
+            <p class="item-name">IBK 기업</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_lotte.svg"></p>
+            <p class="item-name">롯데</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_nh.svg"></p>
+            <p class="item-name">농협</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_bc.svg"></p>
+            <p class="item-name">비씨</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_hyundai.svg"></p>
+            <p class="item-name">현대</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_hyundaidepart.svg"></p>
+            <p class="item-name">현대백화점</p>
+          </button>
+          <button class="list-item">
+            <p class="item-logo"><img src="../../resources/images/logo_woori.svg"></p>
+            <p class="item-name">우리</p>
+          </button>
+        </div>
+      </section>
+
 
     </div>
     <!-- //container -->
   </div>
   <script src="../../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../../resources/js/swiper-4.5.1.min.js"></script>
   <script src="../../resources/js/design.js"></script>
   <script>
+      var swiper = new Swiper("#eventSwipe", {
+        pagination: {
+          el: ".event-swipe .swiper-pagination",
+        },
+      });
   </script>
 </body>
 

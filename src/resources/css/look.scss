@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import 'module';
+@import 'swiper';
 
 #wrap {
   .primary-color {
@@ -8,17 +9,19 @@
   .secondary-color {
     @include secondary-color;
   }
+  .btn-view-more {
+    height: px(64);
+    border-top: 1px solid #E5E9EF;
+    margin-bottom: px(14);
+    font-size: px(16);
+    text-decoration: none;
+  }
   .look-landing {
+    padding-bottom: px(56);
     .head-content {
       padding-bottom: px(40);
     }
-    .content-title {
-      text-align: left;
-      &.main {
-        padding-left: 0;
-        font-size: px(18);
-        font-weight: bold;
-      }
+    .content-title-box {
       .link {
         margin-top: px(5);
         font-weight: 400;
@@ -26,6 +29,14 @@
         &::after {
           background: url(../images/icon_right_link.svg) center no-repeat;
         }
+      }
+    }
+    .content-title {
+      text-align: left;
+      &.main {
+        padding-left: 0;
+        font-size: px(18);
+        font-weight: bold;
       }
     }
 
@@ -154,5 +165,68 @@
         }
       }
     }
+    .look-event-swipe {
+      border-top: 0;
+      padding-bottom: px(24);
+      .event-swipe {
+        padding-bottom: 40px;
+      }
+      .event-link {
+        text-align: center;
+      }
+      .event-figure {
+        max-width: px(91);
+        padding-top: px(144);
+        margin: 0 auto px(8);
+      }
+      .info {
+        &-name {
+          padding-bottom: px(8);
+          font-size: px(20);
+          font-weight: 700;
+        }
+        &-desc {
+          padding-bottom: px(8);
+          font-size: px(14);
+          span {
+            display: inline-block;
+            font-weight: 700;
+          }
+        }
+      }
+      .benefit-tag {
+        display: block;
+        height: initial;
+        background-color: initial;
+        padding: 0;
+        font-size: px(14);
+        font-weight: 400;
+        color: #3E4459;
+        text-align: center;
+        span {
+          font-size: inherit;
+        }
+      }
+    }
+    .cardcorp-content {
+      padding: px(40) px(20);
+      background-color: #F4F6F8;
+      border-radius: px(24);
+
+      .cardcorp-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .list-item {
+        display: block;
+        width: calc((100%/4) - px(11));
+        height: calc((100%/4));
+        margin: px(5.5);
+        background-color: #ffffff;
+        border-radius: px(20);
+      }
+    } 
   }
 }
