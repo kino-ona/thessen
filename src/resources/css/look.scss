@@ -229,4 +229,60 @@
       }
     } 
   }
+
+	.drawer {
+		.btn-wrap .btn {
+			font-size: px(18);
+		}
+	}
+	.drawer-paper {
+		&.wrap {
+			.wrap-scroll {
+				max-height: 60vh;
+				padding: 1.6rem 0 2.6rem;
+				overflow-y: auto;
+			}
+		}
+	}
+	.drawer-content {
+		&.alert {
+			max-height: 100%;
+		}
+		.title {
+			width: 100%;
+      font-size: px(18);
+			text-align: left;
+		}
+		.desc {
+			* {
+				font-size: px(14);
+				text-align: left;
+			}
+			ol {
+				margin-top: 12px;
+			}
+			li {
+				position: relative;
+				padding-left: 16px;
+				&::before {
+					content: '·';
+					position: absolute;
+					top: 2px;
+					left: 0;
+					font-size: px(28);
+				}
+				&+li {
+					margin-top: 8px;
+				}
+			}
+		}
+		.bottom-title {
+			margin-top: 24px;
+			text-align: right;
+		}
+		.bottom-date {
+			margin-top: 8px;
+			text-align: right;
+		}
+	}
 }
