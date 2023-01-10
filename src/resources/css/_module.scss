@@ -6,7 +6,7 @@ $baseFontSize: 10;
 }
 
 $urlImg: '../images/';
-$default_color: #111;
+$default-color: #111;
 
 // common
 @mixin blind {
@@ -37,6 +37,12 @@ $default_color: #111;
 }
 @mixin secondary-color {
   color: #FD9433;
+}
+@mixin default-black-color {
+  color: #202434;
+}
+@mixin default-white-color {
+  color: #fff;
 }
 
 @mixin ellipse($line) {
