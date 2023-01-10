@@ -22,6 +22,19 @@
     font-size: px(16);
     text-decoration: none;
   }
+  #header {
+    background-color: transparent;
+    h1 {
+      color:#ffffff;
+    }
+    [class^=btn-] {
+      &.btn-back {
+        i {
+          background: url(../images/icon_back_white.svg) center no-repeat;
+        }
+      }
+    }
+  }
   .look-landing {
     padding-bottom: px(56);
     .head-content {
@@ -307,10 +320,12 @@
 	}
 
 	.look-main {
+    margin-top: px(-52);
 		.secondary-color {
 			color: #FFC700;
 		}
     .head-content {
+      padding-top: px(52);
       padding-bottom: px(60);
 			position: relative;
 			background-color: #3383FD;
@@ -377,6 +392,7 @@
 
 		.tag-content {
       padding-top: px(40);
+      border-top: 0;
       .content-title-box {
 				flex-direction: column;
 				align-items: flex-start;
@@ -391,6 +407,7 @@
 					padding: 4px 6px;
 					color: #3383FD;
 					font-size: px(16);
+          font-weight: 500;
 					line-height: px(20);
 					background-color: #E9EEFF;
 					border-radius: px(6);
