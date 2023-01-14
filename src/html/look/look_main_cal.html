@@ -809,35 +809,66 @@
       $('.cal-list').find('input[type=checkbox]').each(function(i){
         $(this).change(function(i){
           if($(this).is(":checked")) {
-						$('.cal-list').find('input[type=checkbox]').parents('.td').removeClass('in-range')
+
+					console.log($('.cal-list').find('input[type=checkbox]:checked').length)
+						$('.cal-list').find('input[type=checkbox]').parents('.td').removeClass('in-range');
             var chkval = $(this).attr('data-value');
             chkArr.push(chkval);
 
 						var startVal = chkArr[0];
 						var endVal = chkArr[chkArr.length - 1];
-						// console.log("startVal - " + startVal + "/" + "endVal - " + endVal)
 						
             var delay = setTimeout(function(){
 							for( var i = startVal; i  <= endVal; i++) {
-								console.log(i)
 								$('.cal-list').find('input[type=checkbox]').eq(i - 1).parents('.td').addClass('in-range');
+								
+								var delay2 = setTimeout(function(){ 
+									if(chkArr.length > 1) {
+										$('.cal-list').find('.range-end').addClass('in-range');
+									}
+									clearTimeout(delay2);
+								}, 200);
+
+
+								$('.cal-list').find('input[type=checkbox]').parents('.td').removeClass('range-end');
+								if(chkval === startVal) {
+									$('.cal-list').find('input[type=checkbox]').eq(startVal - 1).parents('.td').removeClass('in-range');
+									$('.cal-list').find('input[type=checkbox]').eq(startVal - 1).parents('.td').addClass('range-start');
+								}
+								if(chkval === endVal) {
+									$('.cal-list').find('input[type=checkbox]').eq(endVal - 1).parents('.td').removeClass('in-range');
+									$('.cal-list').find('input[type=checkbox]').eq(endVal - 1).parents('.td').addClass('range-end');
+								}
 							}
-							
-							$('.cal-list').find('input[type=checkbox]').parents('.td').removeClass('range-end')
-							if(chkval === startVal) {
-								$('.cal-list').find('input[type=checkbox]').eq(startVal - 1).parents('.td').removeClass('in-range')
-								$('.cal-list').find('input[type=checkbox]').eq(startVal - 1).parents('.td').addClass('range-start')
+
+							for( var i = endVal; i  <= startVal; i++) {
+								$('.cal-list').find('input[type=checkbox]').eq(i - 1).parents('.td').addClass('in-range');
+								console.log(startVal)
+								console.log(endVal)
+								if(startVal > endVal) {
+									$('.cal-list').find('input[type=checkbox]').eq(startVal - 1).parents('.td').removeClass('range-start');
+									$('.cal-list').find('input[type=checkbox]').eq(startVal - 1).parents('.td').addClass('range-end');
+								}
+								if(chkval === startVal) {
+									$('.cal-list').find('input[type=checkbox]').eq(startVal - 1).parents('.td').removeClass('in-range');
+									$('.cal-list').find('input[type=checkbox]').eq(startVal - 1).parents('.td').addClass('range-start');
+								}
+								
+								if(chkval === endVal) {
+									$('.cal-list').find('input[type=checkbox]').eq(endVal - 1).parents('.td').removeClass('in-range');
+									$('.cal-list').find('input[type=checkbox]').eq(endVal - 1).parents('.td').addClass('range-start');
+								}
 							}
-							if(chkval === endVal) {
-								$('.cal-list').find('input[type=checkbox]').eq(endVal - 1).parents('.td').removeClass('in-range')
-								$('.cal-list').find('input[type=checkbox]').eq(endVal - 1).parents('.td').addClass('range-end')
+
+							if($('.cal-list').find('.range-start').length > 1) {
+								$('.cal-list').find('.range-start').eq(0).removeClass('range-start')
 							}
 
               clearTimeout(delay);
             }, 200);
 
           } else {
-						// chkArr = [];
+						chkArr.length = 0;
 						$('.cal-list').find('input[type=checkbox]').parents('.td').removeClass('in-range')
             $(this).parents('.td').removeClass('in-range range-start range-end');
           }
