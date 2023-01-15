@@ -279,6 +279,8 @@
 	}
 	.drawer-content {
 		max-height: 100%;
+		padding-left: px(20);
+		padding-right: px(20);
 		.title {
 			width: 100%;
 			text-align: left;
@@ -546,10 +548,17 @@
 				color: #9BA2BC;
 			}
 		}
+
+		.chart-box {
+			margin: 0 auto;
+			div {
+				margin: 0 auto;
+			}
+		}
 		.chart-detail {
 			padding: 0 px(24) px(16);
 			margin-top: px(16);
-			margin-bottom: px(40);
+			margin-bottom: px(24);
 			position: relative;
 			background-color: #F4F6F8;
 			border-radius: px(12) px(12) 0 0;
