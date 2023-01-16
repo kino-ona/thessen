@@ -269,6 +269,8 @@
 		}
 	}
 	.drawer-paper {
+		border-top-left-radius: 2.4rem;
+		border-top-right-radius: 2.4rem;
 		&.wrap {
 			.wrap-scroll {
 				max-height: 60vh;
@@ -1023,7 +1025,7 @@
 		}
 		.usage-rank-list {
 			width: 100%;
-			padding-top: 1.6rem;
+			padding-top: 2rem;
 			.title {
 				font-weight: 400;
 			}
@@ -1051,11 +1053,15 @@
 				}
 			}
 			.tbody {
+				padding-bottom: px(10);
 				.tr {
 					width: 100%;
 					padding-bottom: px(12);
 					display: flex;
 					align-items: center;
+					&:last-of-type {
+						padding-bottom: 0;
+					}
 				}
 				.td {
 					&:first-of-type {
@@ -1091,7 +1097,9 @@
 	}
 	#pop-selectCard {
 		.select {
-			height: px(74);
+			&:first-of-type {
+				height: px(74);
+			}
 			padding: px(12) px(16);
 			box-sizing: border-box;
 			margin-bottom: px(8);
@@ -1162,8 +1170,10 @@
 	}
 	#pop-cardForYou {
 		.drawer-content {
-			padding-left: px(20);
-			padding-right: px(20);
+			padding: px(32) px(20) px(22) px(20);
+		}
+		.wrap-scroll {
+			padding: 0;
 		}
 		.title {
 			margin-bottom: px(4);
@@ -1185,6 +1195,7 @@
 			text-align: left;
 		}
 		.list-item {
+			width: auto;
 			.item-bg {
 				border-radius: px(12);
 			}
@@ -1604,6 +1615,9 @@
 	#pop-cardApply {
 		.drawer-content {
 			padding: px(40) px(20);
+		}
+		.title {
+			padding-left: px(4);
 		}
 		.item {
 			margin-top: px(16);
