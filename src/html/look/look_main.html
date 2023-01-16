@@ -75,59 +75,6 @@
 				</div>
 			</section>
 			<!--// 소비내역 데이터가 없을 때 -->
-			<!-- 소비카테고리가 하나일 때 -->
-			<section class="content chart-content no-content-border" style="display: none;">
-				<div class="content-title-box">
-					<h2 class="content-title main">11월</h2>
-					<span>
-						<a href="#" class="btn-calendar" onclick="UI.popupOpen.init('calendar');"></a>
-					</span>
-				</div>
-				<div class="content-title-wrap">
-						<h2 class="content-title sub">총 소비금액</h2>
-						<span class="content-desc">
-								<div>3,690,770</div><div class="unit">원</div>
-						</span>
-				</div>
-				<div class="chart">
-					<div class="chart-title">
-						이번 달은&nbsp;<b>쇼핑</b>에서&nbsp;가장 많이 소비하셨어요
-					</div>
-					<p class="chart-graph">
-						<img class="tip" src="../../resources/images/dummy/@chart-tip-1.svg" />
-						<img src="../../resources/images/dummy/@chart-1.svg" />
-					</p>
-					<p class="chart-desc">그래프를 클릭하면 상세 내역을 볼 수 있어요</p>
-				</div>
-				<div class="chart-detail">
-					<div class="chart-detail_top">
-						<span class="colorchip"></span>
-						<div class="chart-detail-title"><div>1. 쇼핑 </div>&nbsp;<span>100%</span></div>
-						<div class="chart-detail-content"><div>213,232,130</div>&nbsp;<div class="unit">원</div></div>
-					</div>
-					<div class="chart-detail_list">
-						<ol>
-							<li>
-								<div>GS25</div>
-								<div><span>62,500</span>&nbsp;<span class="unit">원</span></div>
-							</li>
-							<li>
-								<div>무신사 스토어 뉴발란스 20 무신사</div>
-								<div><span>123,162,500</span>&nbsp;<span class="unit">원</span></div>
-							</li>
-							<li>
-								<div>스타벅스</div>
-								<div><span>12,500</span>&nbsp;<span class="unit">원</span></div>
-							</li>
-							<li>
-								<div>기타</div>
-								<div><span>212,500</span>&nbsp;<span class="unit">원</span></div>
-							</li>
-						</ol>
-					</div>
-				</div>
-			</section>
-			<!--// 소비카테고리가 하나일 때 -->
 			<!-- 소비내역이 하나일 때 + 달력 월 설정 -->
 			<section class="content chart-content no-content-border">
 				<div class="content-title-box">
@@ -802,7 +749,6 @@
 			}
     })
     function popAlert(text){
-      console.log('alrttttt');
       var alert = document.querySelector('#pop-alert');
       var alertText = document.querySelector('#pop-alert p');
       alertText.innerHTML = text;
