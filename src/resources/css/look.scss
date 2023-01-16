@@ -516,7 +516,7 @@
 				width: px(24);
 				height: px(24);
 				display: inline-block;
-				background-image: url("../images/icon_calendar.svg");
+				background-image: url("../images/icon_calendar-search.svg");
 				background: {
 					size: px(24);
 					position: center center;
@@ -2009,6 +2009,90 @@
 				letter-spacing: -0.03em;
 				text-align: center;
 				color: #7E8292;
+			}
+		}
+	}
+
+	.look-list {
+    padding-bottom: px(56);
+    .head-content {
+      padding-bottom: px(40);
+    }
+    .content-title-box {
+    }
+    .content-title {
+      text-align: left;
+      &.main {
+        padding-left: 0;
+        font-size: px(18);
+        font-weight: bold;
+      }
+    }
+
+		.event-list-content {
+			.tab-content {
+				margin-top: px(24);
+				.content-title-box {
+					margin-bottom: px(17);
+				}
+				.list-item {
+					padding-bottom: px(24);
+					border-bottom: 8px solid #F4F6F8;
+					> div {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						img {
+							margin-right: px(8);
+						}
+					}
+					.title {
+						font-size: px(18);
+						font-weight: 700;
+						line-height: px(26);
+						letter-spacing: -0.03em;
+						text-align: left;
+						strong {
+							color: #3383FD;
+						}
+						span {
+							display: block;
+							margin-top: px(4);
+							font-size: px(14);
+							font-weight: 400;
+							line-height: px(18);
+							letter-spacing: -0.03em;
+							text-align: left;							
+						}
+					}
+					.period {
+						padding: px(10) px(16);
+						margin-top: px(12);
+						display: flex;
+						align-items: center;
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 18px;
+						letter-spacing: -0.03em;
+						text-align: left;
+						color: #3E4459;						
+						background-color: #F4F6F8;
+						border-radius: px(12);
+						span {
+							padding: px(2) px(8);
+							margin-left: auto;
+							display: inline-block;
+							font-size: px(12);
+							font-weight: 700;
+							line-height: px(18);
+							letter-spacing: 0em;
+							text-align: left;
+							color: #fff;
+							background-color: #3383FD;
+							border-radius: px(16);
+						}
+					}
+				}
 			}
 		}
 	}
