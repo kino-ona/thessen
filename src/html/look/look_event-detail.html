@@ -312,18 +312,17 @@
   <script src="../../resources/js/jquery-1.12.4.min.js"></script>
   <script src="../../resources/js/design.js"></script>
   <script>
-    function popAlert(text, boolean="false"){
+    function popAlert(text){
       var alert = document.querySelector('#pop-alert');
       var alertText = document.querySelector('#pop-alert p');
-			if ()
       alertText.innerHTML = text;
       alert.animate([
         { opacity: 0.8 },
         { opacity: 0 },
         ], {
-				easing: 'ease-out',
-				duration: 2400,
-        fill: 'backwards',
+            easing: 'ease-out',
+            duration: 2400,
+            fill: 'backwards',
         }
       );
     }

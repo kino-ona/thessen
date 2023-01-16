@@ -316,7 +316,7 @@
 							<div class="carousel-pagination"></div>
 					</div>
 				</div>
-				<div class="tab-menu">
+				<div id="scrollToHere" class="tab-menu">
 					<div class="tablist-box type2">
 						<button type="button" aria-label="0" aria-selected="true">소비 많은 순</button>
 						<button type="button" aria-label="1" aria-selected="false">혜택 높은 순</button>
@@ -471,7 +471,7 @@
 					</div>
 					<div class="btn-wrap">
 						<button type="button" onclick="UI.popupClose.init('selectCard');" class="btn secondary">취소</button>
-						<button type="button" onclick="UI.popupClose.init('selectCard');gagingUpAnimation();" class="btn primary">선택</button>
+						<button id="scrollTrigger" type="button" onclick="UI.popupClose.init('selectCard');gagingUpAnimation();" class="btn primary">선택</button>
 					</div>
 				</div>
 			</div>
@@ -737,6 +737,9 @@
     });
 	</script>
 	<script>
+        $('#scrollTrigger').on('click', function(){
+            $("html").animate({scrollTop: $("#scrollToHere").position().top}, 1200);
+        })
     $('.select').on('click', function(){
 			var $this = $(this);
 			$this.attr('aria-selected')=='true' ? $this.attr('aria-selected', 'false') : $this.attr('aria-selected', 'true');
