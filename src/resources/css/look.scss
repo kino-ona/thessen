@@ -23,23 +23,37 @@
     text-decoration: none;
   }
 	[aria-hidden='true'] {
-		display: none !important;
+			display: none !important;
 	}
 	[aria-hidden='false'] {
-		display: block;
+			display: block;
 	}
-  #header {
+  header.header {
     background-color: transparent;
-    h1 {
-      color:#fff;
-    }
-    [class^=btn-] {
-      &.btn-back {
-        i {
-          background: url(../images/icon_back_white.svg) center no-repeat;
-        }
-      }
-    }
+    &-white {
+			h1 {
+				color:#fff;
+			}
+			[class^=btn-] {
+				&.btn-back {
+					i {
+						background: url(../images/icon_back_white.svg) center no-repeat;
+					}
+				}
+			}
+		}
+    &-black {
+			h1 {
+				color:#202434;
+			}
+			[class^=btn-] {
+				&.btn-back {
+					i {
+						background: url(../images/icon_back_black.svg) center no-repeat;
+					}
+				}
+			}
+		}
   }
   .look-landing {
     padding-bottom: px(56);
@@ -448,29 +462,6 @@
 			width: 100%;
 			text-align: left;
 		}
-		.desc {
-			* {
-				font-size: px(14);
-				text-align: left;
-			}
-			ol {
-				margin-top: px(12);
-			}
-			li {
-				position: relative;
-				padding-left: px(16);
-				&::before {
-					content: '·';
-					position: absolute;
-					top: px(2);
-					left: 0;
-					font-size: px(28);
-				}
-				&+li {
-					margin-top: px(8);
-				}
-			}
-		}
 	}
 
 	.msg {
@@ -507,6 +498,30 @@
 	}
 
 	#pop-eventInfoTerm {
+		.desc {
+			* {
+				font-size: px(14);
+				text-align: left;
+			}
+			ol {
+				margin-top: px(12);
+			}
+			li {
+				position: relative;
+				padding-left: px(16);
+				&::before {
+					content: '·';
+					position: absolute;
+					top: px(2);
+					left: 0;
+					font-size: px(28);
+					border-radius: 50%;
+				}
+				&+li {
+					margin-top: px(8);
+				}
+			}
+		}
 		.bottom-title {
 			margin-top: px(24);
 			text-align: right;
@@ -1424,7 +1439,7 @@
 			border-radius: 0;
 		}
 		.head-content {
-			padding: px(52) 0 px(16);
+			padding: px(16) 0;
 			position: relative;
 			background-color: #fff;
 			.content-title-box {
@@ -1435,7 +1450,6 @@
 				padding-left: px(20);
 				padding-right: px(20);
 				&.main {
-					padding-top: px(16);
 					span {
 						font-size: px(20);
 						line-height: px(30);
@@ -1567,11 +1581,25 @@
 				}
 				strong {
 					margin-right: px(4);
+					display: flex;
+					align-items: center;
 				}
 				i {
-					margin-right: px(4);
+					width: px(40);
+					height: px(40);
+					margin-right: px(8);
 					display: inline-flex;
-					font-size: px(32);
+					background: {
+						size: 100%;
+						repeat: no-repeat;
+						position: center;
+					}
+					&.ic-open-book {
+						background-image: url(../images/icon_illu-open-book.svg);
+					}
+					&.ic-airplane {
+						background-image: url(../images/icon_illu-airplane.svg);
+					}
 				}
 			}
 			.event-rank_list {

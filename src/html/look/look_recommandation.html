@@ -15,8 +15,8 @@
 <body>
 	<div id="wrap">
 		<!-- header -->
-		<header id="header" data-ui-fixed="top">
-			<h1 class="page-tit" style="color: black;">추천결과</h1>
+    <header id="header" class="header header-black" data-ui-fixed="top">
+			<h1 class="page-tit">추천결과</h1>
 			<button type="button" class="btn-back"><i></i></button>
 		</header>
 		<!-- //header -->
@@ -63,7 +63,7 @@
 			<section class="content recommandation-content no-content-border">
 				<div class="content-title-box">
 					<div class="content-title main">
-						<span class="default-black-color"><strong><i>&#128214;<!--U+1F4D6--></i> 교육</strong> 강화 카드</span>
+						<span class="default-black-color"><strong><i class="ic-open-book"></i> 교육</strong> 강화 카드</span>
 					</div>
 				</div>
 				<div class="event-rank_list">
@@ -103,7 +103,7 @@
 			<section class="content recommandation-content">
 				<div class="content-title-box">
 					<div class="content-title main">
-						<span class="default-black-color"><strong><i>&#9992;<!--U+2708--></i> 항공마일리지</strong> 강화 카드</span>
+						<span class="default-black-color"><strong><i class="ic-airplane"></i> 항공마일리지</strong> 강화 카드</span>
 					</div>
 				</div>
 				<div class="event-rank_list">
@@ -216,11 +216,7 @@
         el: ".event-swipe .swiper-pagination",
       },
     });
-		UI.popupOpen.init('cardApply');
   </script>
-	<script>
-
-	</script>
 </body>
 
 </html>
