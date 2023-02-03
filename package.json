@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/kino-ona/thessen.git"
   },
-  "author": "",
+  "author": "HaebinCho",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kino-ona/thessen/issues"
@@ -19,15 +19,16 @@
   "homepage": "https://github.com/kino-ona/thessen#readme",
   "devDependencies": {
     "browser-sync": "^2.27.9",
+    "bufferutil": "^4.0.1",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cached": "^1.1.1",
     "gulp-dependents": "^1.2.5",
     "gulp-file-include": "^2.3.0",
-    "gulp-imagemin": "^7.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-noop": "^1.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
@@ -35,6 +36,7 @@
     "gulp.spritesmith-multi": "^3.1.0",
     "merge-stream": "^2.0.0",
     "sass": "^1.50.1",
+    "utf-8-validate": "^5.0.2",
     "vinyl-buffer": "^1.0.1"
   },
   "browserslist": [
