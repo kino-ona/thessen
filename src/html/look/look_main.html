@@ -102,7 +102,7 @@
 					</div>
 					<p class="chart-desc">그래프를 클릭하면 상세 내역을 볼 수 있어요</p>
 				</div>
-				<div class="chart-detail">
+				<div class="chart-detail chart-detail--closed">
 					<div class="chart-detail_top">
 						<span class="colorchip"></span>
 						<div class="chart-detail-title"><div>1. 쇼핑 </div>&nbsp;<span>33%</span></div>
@@ -371,13 +371,13 @@
 									<p class="item-name">택시</p>
 									<div class="percent pos"><strong>51%</strong></div>
 							</button>
-							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
+							<button class="list-item list-item-unclickable" onclick="UI.popupOpen.init('usageRankList');">
 									<div class="item-bg">
-											<div class="bg" data-gage="90"></div>
+											<div class="bg" data-gage="100"></div>
 											<p class="item-logo"><img src="../../resources/images/ill_train.svg"></p>
 									</div>
 									<p class="item-name">대중교통</p>
-									<div class="percent pos"><strong>90%</strong></div>
+									<div class="percent pos"><strong>120%</strong></div>
 							</button>
 							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
 									<div class="item-bg">
@@ -582,14 +582,14 @@
                     <p class="item-name">택시</p>
                     <div class="percent pos"><strong>51%</strong></div>
                                 </button>
-                                <button class="list-item">
+                                <button class="list-item list-item-unclickable">
                     <div class="checkbox" aria-selected="false"></div>
                     <div class="item-bg">
-                        <div class="bg" data-gage="90"></div>
+                        <div class="bg" data-gage="100"></div>
                         <p class="item-logo"><img src="../../resources/images/ill_train.svg"></p>
                     </div>
                     <p class="item-name">대중교통</p>
-                    <div class="percent pos"><strong>90%</strong></div>
+                    <div class="percent pos"><strong>120%</strong></div>
                                 </button>
                                 <button class="list-item">
                     <div class="checkbox" aria-selected="false"></div>
@@ -705,9 +705,9 @@
 				</div>
 			</div>
 
-      <div id="pop-alert" class="msg">
-				<p></p>
-      </div>
+            <div id="pop-alert" class="msg">
+                <p></p>
+            </div>
 
 		</div>
 		<!-- //container -->
@@ -737,9 +737,14 @@
     });
 	</script>
 	<script>
-        $('#scrollTrigger').on('click', function(){
-            $("html").animate({scrollTop: $("#scrollToHere").position().top}, 800);
-        })
+    $('#scrollTrigger').on('click', function(){
+        $("html").animate({scrollTop: $("#scrollToHere").position().top}, 800);
+    })
+    $('.chart-detail').on('click', function(){
+        const isOpen = 'chart-detail--opened';
+        const isClosed = 'chart-detail--closed';
+        $(this).hasClass(isOpen) ? $(this).removeClass(isOpen).addClass(isClosed) : $(this).removeClass(isClosed).addClass(isOpen);
+    })
     $('.select').on('click', function(){
 			var $this = $(this);
 			$this.attr('aria-selected')=='true' ? $this.attr('aria-selected', 'false') : $this.attr('aria-selected', 'true');
