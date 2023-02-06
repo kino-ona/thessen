@@ -173,30 +173,40 @@
 	</div>
 	<script>
 		const tabButtonElemList = document.querySelectorAll('.tab-menu .tablist-box.type3 button');
-		const tabContList = Array.from(document.querySelectorAll('.event-list-content .tab-content'));
+		const tabContArr = Array.from(document.querySelectorAll('.event-list-content .tab-content'));
 		tabButtonElemList.forEach(function (e) {
 			e.addEventListener('click', function (e) {
-				var targetIdx = e.currentTarget.getAttribute('aria-label');
-				for (let elem of e.currentTarget.parentElement.children) {
+                $this = e.currentTarget;
+				var targetIdx = $this.getAttribute('aria-label');
+				for (let elem of $this.parentElement.children) {
 					elem.ariaSelected = 'false';
 				}
-				e.currentTarget.ariaSelected = 'true';
-				tabContList.map( x => x.getAttribute('aria-label')==targetIdx ? x.setAttribute('aria-hidden', 'false') : x.setAttribute('aria-hidden', 'true') );
+				$this.ariaSelected = 'true';
+				tabContArr.map( x => x.getAttribute('aria-label')==targetIdx ? x.setAttribute('aria-hidden', 'false') : x.setAttribute('aria-hidden', 'true') );
 			})
 		});
+        const btnItemList = document.querySelectorAll('.carousel button.list-item')
+        btnItemList.forEach(function (e) {
+            e.addEventListener('click', function (e) {
+                $this = e.currentTarget;
+                let targetItemList = Array.from($this.parentElement.parentElement.querySelectorAll('button.list-item'));
+				targetItemList.map( x => x.classList.remove('list-item-selected') )
+                $this.classList.add('list-item-selected');
+            })
+        })
 	</script>
 	<script>
-		var swiper = new Swiper("#carousel-cardcorp-0", {
-			spaceBetween: 11,
-			slidesPerView: 4.625,
-			observer: true,
-			observeParents: true,
+    var swiper = new Swiper("#carousel-cardcorp-0", {
+        spaceBetween: 11,
+        slidesPerView: 4.625,
+        observer: true,
+        observeParents: true,
 	});
-		var swiper = new Swiper("#carousel-cardcorp-1", {
-			spaceBetween: 11,
-			slidesPerView: 4.625,
-			observer: true,
-			observeParents: true,
+    var swiper = new Swiper("#carousel-cardcorp-1", {
+        spaceBetween: 11,
+        slidesPerView: 4.625,
+        observer: true,
+        observeParents: true,
 	});
 	</script>
 </body>
