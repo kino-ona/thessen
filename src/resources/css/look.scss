@@ -67,13 +67,13 @@
     padding-bottom: px(56);
 		overflow-x: hidden;
 		.top-swipe {
-			.swiper-wrapper {
-				width: px(280);
-				margin: 0 auto;
-			}
-			.swiper-slide {
-				width: px(92);
-			}
+			// .swiper-wrapper {
+			// 	width: px(280);
+			// 	margin: 0 auto;
+			// }
+			// .swiper-slide {
+			// 	width: px(92);
+			// }
 		}
     .head-content {
       padding-bottom: px(46);
@@ -138,6 +138,7 @@
 				}
       }
 			&.figure {
+				width: 100%;
 				margin-top: px(45);
 				text-align: center;
 			}
