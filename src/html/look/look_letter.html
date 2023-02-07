@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="ko-KR">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+  <link href="../../resources/css/look.css" media="screen" rel="stylesheet">
+  <title>더쎈카드</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header id="header" data-ui-fixed='top'>
+      <h1 class="page-tit">이달의 보너스 레터</h1>
+      <button type="button" class="btn-back"><i></i></button>
+    </header> 
+    <!-- //header -->
+    <!-- container -->
+    <div id="container" class="look-letter">
+
+      <section class="content head-content">
+        <div class="content-title-box">
+          <h2 class="content-title main">
+            120만 원 만드는<br>
+            카드 EVENT
+            <div class="desc">2월에 참여 가능한 이벤트</div>
+          </h2>
+          <div class="content-title figure">
+            <img src="../../resources/images/dummy/illu_windmill.svg" />
+            <p>참여 가능한 이벤트 모으는 중</p>
+          </div>
+        </div>
+      </section>
+
+			<div class="btn-wrap full">
+				<button type="button" data-ui-fixed='bottom' class="btn-action" onclick="UI.popupOpen.init('eventList');">참여 가능한 이벤트 보기</button>
+			</div>
+    </div>
+    <!-- //container -->
+
+  <!-- 소비내역 데이터가 없을 때 -->
+  <div id="pop-eventTermAgree" class="drawer ly-drawer">
+    <div class="drawer-paper wrap">
+      <div class="drawer-content term">
+        <button type="button" class="btn-close" onclick="UI.popupClose.init('eventTermAgree');"><i></i></button>
+        <h2 class="title">참여 가능한 이벤트를 보기 위해 <br>동의가 필요해요</h2>
+        <ul class="term-chk-list">
+          <li>
+            <span class="chk">
+              <input type="checkbox" name="terms" id="terms01">
+              <label for="terms01">등록한 카드 목록 불러오기</label>
+            </span>
+          </li>
+          <li>
+            <span class="chk">
+              <input type="checkbox" name="terms" id="terms02">
+              <label for="terms02">6개월 이내 사용 이력 불러오기</label>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn primary">참여 가능한 이벤트 보기</button>
+      </div>
+    </div>
+  </div>
+  <!--// 소비내역 데이터가 없을 때 -->
+
+  <!-- 참여가능한 이벤트 있음 케이스 -->
+  <div id="pop-eventList" class="drawer ly-drawer">
+    <div class="drawer-paper wrap">
+      <div class="drawer-content term">
+        <div class="wrap-scroll">
+          <button type="button" class="btn-close" onclick="UI.popupClose.init('eventList');"><i></i></button>
+          <h2 class="title">참여 가능한 이벤트</h2>
+          <ul class="link-list">
+            <li>
+              <p class="logo"><img src="../../resources/images/logo_shinhan.svg"></p>
+              <div class="item-title">신한카드 <strong>19만원 받기</strong></div>
+              <button type="button" class="btn-link"></button>
+            </li>
+            <li>
+              <p class="logo"><img src="../../resources/images/logo_kookmin.svg"></p>
+              <div class="item-title">국민카드 <strong>14만원 받기</strong></div>
+              <button type="button" class="btn-link"></button>
+            </li>
+            <li>
+              <p class="logo"><img src="../../resources/images/logo_hana.svg"></p>
+              <div class="item-title">하나카드 <strong>11만원 받기</strong></div>
+              <button type="button" class="btn-link"></button>
+            </li>
+            <li>
+              <p class="logo"><img src="../../resources/images/logo_lotte.svg"></p>
+              <div class="item-title">롯데카드 <strong>19만원 받기</strong></div>
+              <button type="button" class="btn-link"></button>
+            </li>
+            <li>
+              <p class="logo"><img src="../../resources/images/logo_ibk.svg"></p>
+              <div class="item-title">IBK 기업카드 <strong>11만원 받기</strong></div>
+              <button type="button" class="btn-link"></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="btn-wrap">
+        <button type="button" class="btn primary">참여 가능한 이벤트 보기</button>
+      </div> -->
+    </div>
+  </div>
+  <!--// 참여가능한 이벤트 없음 케이스 -->
+
+  <!-- 참여가능한 이벤트 있음 케이스 -->
+  <div id="pop-eventListEmpty" class="drawer ly-drawer">
+    <div class="drawer-paper wrap">
+      <div class="drawer-content term">
+        <button type="button" class="btn-close" onclick="UI.popupClose.init('eventListEmpty');"><i></i></button>
+        <h2 class="title">참여 가능한 이벤트</h2>
+        <p class="desc">아쉽지만 지금 참여하실 수 있는 <br>이벤트가 없어요</p>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn primary">닫기</button>
+      </div>
+    </div>
+  </div>
+  <!--// 참여가능한 이벤트 없음 케이스 -->
+  
+  </div>
+  <script src="../../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../../resources/js/design.js"></script>
+</body>
+
+</html>

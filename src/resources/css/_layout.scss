@@ -1138,25 +1138,38 @@
     }
   }
 }
-.term-chk-list li {
-  display: flex;
-  align-items: center;
-  position: relative;
-  & ~ li {
-    margin-top: px(10);
+.term-chk-list {
+  li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    & ~ li {
+      margin-top: px(10);
+    }
+    .btn-link {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      @include bgf;
+      width: px(18);
+      height: px(18);
+      background-image: url('../images/icon_terms.svg');
+      background-size: px(8) px(12);
+      background-position: right center;
+    }
   }
-  .btn-link {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    @include bgf;
-    width: px(18);
-    height: px(18);
-    background-image: url('../images/icon_terms.svg');
-    background-size: px(8) px(12);
-    background-position: right center;
+}
+.link-list {
+  @extend .term-chk-list;
+  li {
+    .btn-link {
+      width: 1.2rem;
+      height: 1.8rem;
+      background-image: url(../images/icon_arr.svg);
+      background-size: 100%;
+    }
   }
 }
 .history-title-header {
