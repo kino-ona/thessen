@@ -365,6 +365,8 @@
 				}
 				.number {
 					max-width: px(130);
+					width: px(130);
+          
 					height: px(38);
 					padding: px(7.5) px(8);
 					display: flex;
@@ -379,6 +381,9 @@
 					border-radius: px(4);
 					&::after {
 						content: '원';
+            display: inline-block;
+            padding-left: px(4);
+            margin-left: auto;
 					}
 					* {
 						font-size: px(18);
