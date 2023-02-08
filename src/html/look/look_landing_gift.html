@@ -294,29 +294,9 @@
 				slideShadows : false,
 			}
     });
-    
     $('button.image').on('click', function(){
       $(this).find('img').attr('src', '../../resources/images/gift_aft_click.gif');
     })
-
-    $('.number').each(function(){
-      const self = $(this);
-      let flag = true;
-      $(window).scroll(function(){
-        if ($(window).scrollTop() >= self.offset().top - $(window).height() && flag) {
-          self.prop('Counter',0).animate({
-            Counter: self.text()
-          }, {
-            duration: 700,
-            easing: 'swing',
-            step: function (now) {
-              self.text(Math.ceil(now).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-            }
-          });
-          flag = false;
-        }
-      });
-    });
   </script>
 </body>
 
