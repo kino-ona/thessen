@@ -128,7 +128,7 @@
           </div>
 					<div class="list-item list-item-banner">
 						<div class="text">한 달, 최대 <strong>120만 원</strong> 만드는<br> 카드 이벤트 구경하기</div>
-						<div id="countUpNum" class="number"></div>
+						<div id="countUpNum" class="number">1200000</div>
 					</div>
           <div class="list-item">
             <a href="#" class="event-link">
@@ -322,54 +322,77 @@
 			}
     });
 
-		function countingUpAnimation(id, tarNum) {
-			this.count = 0; this.diff = 0;
-			this.tarCount = parseInt(tarNum);
-			this.id = document.getElementById(id);
-			this.timer = null;
-			this.counter();
-      console.log('countUpNum');
-		};
-    countingUpAnimation.prototype.counter = function() {
-			var self = this;
-			this.diff = this.tarCount - this.count;
+		// function countingUpAnimation(id, tarNum) {
+		// 	this.count = 0; this.diff = 0;
+		// 	this.tarCount = parseInt(tarNum);
+		// 	this.id = document.getElementById(id);
+		// 	this.timer = null;
+		// 	this.counter();
+    //   console.log('countUpNum');
+		// };
+    // countingUpAnimation.prototype.counter = function() {
+		// 	var self = this;
+		// 	this.diff = this.tarCount - this.count;
 	
-			if(this.diff > 0) {
-				self.count += Math.ceil(this.diff / 5);
-			}
+		// 	if(this.diff > 0) {
+		// 		self.count += Math.ceil(this.diff / 5);
+		// 	}
 	
-			this.id.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		// 	this.id.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 	
-			if(this.count < this.tarCount) {
-				this.timer = setTimeout(function() { self.counter(); }, 20);
-			} else {
-				clearTimeout(this.timer);
-			}
-    };
+		// 	if(this.count < this.tarCount) {
+		// 		this.timer = setTimeout(function() { self.counter(); }, 20);
+		// 	} else {
+		// 		clearTimeout(this.timer);
+		// 	}
+    // };
 
-    let tarH = document.getElementById("countUpNum").getBoundingClientRect().height;
-    let tarPos = document.getElementById("countUpNum").getBoundingClientRect().top;
-    let isReachedOnce = false;
+    // let tarH = document.getElementById("countUpNum").getBoundingClientRect().height;
+    // let tarPos = document.getElementById("countUpNum").getBoundingClientRect().top;
+    // let isReachedOnce = false;
 
-    const DefReach = window.addEventListener('scroll', function(){
-      let reach = (window.scrollY + window.innerHeight - tarH) - tarPos;
-      console.log(reach, isReachedOnce);
-    })
+    // const DefReach = window.addEventListener('scroll', function(){
+    //   let reach = (window.scrollY + window.innerHeight - tarH) - tarPos;
+    //   console.log(reach, isReachedOnce);
+    //   new countingUpAnimation("countUpNum", 1200000);
+    // })
 
-    do {           
-        if (50 > reach > 0) {
-          isReachedOnce = true;
-          if ( isReachedOnce ) {
-            new countingUpAnimation("countUpNum", 1200000);
-          };
-          break;
-        } 
-        else {
-          DefReach();
+    // do {           
+    //     if (50 > reach > 0) {
+    //       isReachedOnce = true;
+    //       if ( isReachedOnce ) {
+            
+    //       };
+    //       break;
+    //     } 
+    //     else {
+    //       DefReach();
+    //     }
+    //   } while (
+    //   isReachedOnce == false
+    // );
+
+    $('#countUpNum').each(function () {
+
+      const self = $(this);
+      let flag = true;
+
+      $(window).scroll(function(){
+        if ($(window).scrollTop() >= self.offset().top - $(window).height() && flag) {
+          self.prop('Counter',0).animate({
+            Counter: self.text()
+          }, {
+            duration: 700,
+            easing: 'swing',
+            step: function (now) {
+              self.text(Math.ceil(now).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+            }
+          });
+          flag = false;
         }
-      } while (
-        isReachedOnce == false
-      );
+      });
+    });
+
 	</script>
 </body>
 
