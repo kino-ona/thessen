@@ -85,6 +85,17 @@
 					width: 100%;
 				}
 			}
+      button.image {
+        width: 100%;
+        margin-top: px(-45);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          max-width: px(297);
+          max-height: px(421);
+        }
+      }
     }
     .content-title-box {
 			.desc {
