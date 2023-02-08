@@ -14,10 +14,10 @@
 <body>
   <div id="wrap">
     <!-- header -->
-    <header id="header" data-ui-fixed='top'>
+    <!-- <header id="header" data-ui-fixed='top'>
       <h1 class="page-tit">더쎈포인트 지갑</h1>
       <button type="button" class="btn-back"><i></i></button>
-    </header> 
+    </header>  -->
     <!-- //header -->
     <!-- container -->
     <div id="container" class="look-landing">
@@ -298,7 +298,6 @@
     <!-- //container -->
   </div>
   <script src="../../resources/js/jquery-1.12.4.min.js"></script>
-  <!-- <script src="../../resources/js/swiper-4.5.1.min.js"></script> -->
   <script src="../../resources/js/swiper-bundle.min.js"></script>
   <script src="../../resources/js/design.js"></script>
   <script>
@@ -308,75 +307,23 @@
       },
     });
     var swiper1 = new Swiper("#topSwipe", {
-			loop: true,
+      loop: true,
       loopAdditionalSlides: 1,
-			effect: 'coverflow',
-			centeredSlides: true,
-			slidesPerView: 1.2,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 160,
-				depth: 120,
-				modifier: 1.5,
-				slideShadows : false,
-			}
+      effect: 'coverflow',
+      centeredSlides: true,
+      slidesPerView: 1.2,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 160,
+        depth: 120,
+        modifier: 1.5,
+        slideShadows : false,
+      }
     });
 
-		// function countingUpAnimation(id, tarNum) {
-		// 	this.count = 0; this.diff = 0;
-		// 	this.tarCount = parseInt(tarNum);
-		// 	this.id = document.getElementById(id);
-		// 	this.timer = null;
-		// 	this.counter();
-    //   console.log('countUpNum');
-		// };
-    // countingUpAnimation.prototype.counter = function() {
-		// 	var self = this;
-		// 	this.diff = this.tarCount - this.count;
-	
-		// 	if(this.diff > 0) {
-		// 		self.count += Math.ceil(this.diff / 5);
-		// 	}
-	
-		// 	this.id.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-	
-		// 	if(this.count < this.tarCount) {
-		// 		this.timer = setTimeout(function() { self.counter(); }, 20);
-		// 	} else {
-		// 		clearTimeout(this.timer);
-		// 	}
-    // };
-
-    // let tarH = document.getElementById("countUpNum").getBoundingClientRect().height;
-    // let tarPos = document.getElementById("countUpNum").getBoundingClientRect().top;
-    // let isReachedOnce = false;
-
-    // const DefReach = window.addEventListener('scroll', function(){
-    //   let reach = (window.scrollY + window.innerHeight - tarH) - tarPos;
-    //   console.log(reach, isReachedOnce);
-    //   new countingUpAnimation("countUpNum", 1200000);
-    // })
-
-    // do {           
-    //     if (50 > reach > 0) {
-    //       isReachedOnce = true;
-    //       if ( isReachedOnce ) {
-            
-    //       };
-    //       break;
-    //     } 
-    //     else {
-    //       DefReach();
-    //     }
-    //   } while (
-    //   isReachedOnce == false
-    // );
-
-    $('.number').each(function () {
-
+    $('.number').each(function(){
       const self = $(this);
       let flag = true;
-
       $(window).scroll(function(){
         if ($(window).scrollTop() >= self.offset().top - $(window).height() && flag) {
           self.prop('Counter',0).animate({
@@ -392,8 +339,7 @@
         }
       });
     });
-
-	</script>
+  </script>
 </body>
 
 </html>

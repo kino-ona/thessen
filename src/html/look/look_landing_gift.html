@@ -14,10 +14,10 @@
 <body>
   <div id="wrap">
     <!-- header -->
-    <header id="header" data-ui-fixed='top'>
+    <!-- <header id="header" data-ui-fixed='top'>
       <h1 class="page-tit">더쎈포인트 지갑</h1>
       <button type="button" class="btn-back"><i></i></button>
-    </header> 
+    </header>  -->
     <!-- //header -->
     <!-- container -->
     <div id="container" class="look-landing">
@@ -29,7 +29,7 @@
             띵동~ <span>김해인</span>님 <br>
             맞춤카드가 도착했어요
           </h2>
-          <div class="content-title figure cta" style="width: 100%;">
+          <div class="content-title figure" style="width: 100%;">
             <button type="button" class="image"><img src="../../resources/images/gift_bf_click.gif" /></button>
             <div class="cta-desc">선물상자 열어보기</div>
           </div>
@@ -272,7 +272,6 @@
     <!-- //container -->
   </div>
   <script src="../../resources/js/jquery-1.12.4.min.js"></script>
-  <!-- <script src="../../resources/js/swiper-4.5.1.min.js"></script> -->
   <script src="../../resources/js/swiper-bundle.min.js"></script>
   <script src="../../resources/js/design.js"></script>
   <script>
@@ -295,8 +294,9 @@
 				slideShadows : false,
 			}
     });
-
-    console.log(swiper1)
+    $('button.image').on('click', function(){
+      $(this).find('img').attr('src', '../../resources/images/gift_aft_click.gif');
+    })
   </script>
 </body>
 
