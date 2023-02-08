@@ -25,39 +25,96 @@
       <section class="content head-content">
         <!-- 마이데이터 연결 & AI추천 -->
         <div class="content-title-box">
-          <h2 class="content-title main">
+          <h2 class="content-title main flip-title-before">
             <span>김해인</span>님의 <br>
             이번 달 라운딩 가능성 87.3%
             <div class="desc">20만원 아끼는 카드 여기있어요</div>
 						<div class="badge">AI 추천</div>
           </h2>
-          <div class="content-title figure cta" style="width: 100%;">
+          <h2 class="content-title main flip-title-after">
+            <span>김해인</span>님을 위한<br>
+            주유비에 <img src="../../resources/images/icon_lightning.svg" alt=""> 더쎈카드
+          </h2>
+          <div class="content-title figure cta">
             <div id="topSwipe" class="swiper top-swipe">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
+                        <div class="card-flip">
+                          <div class="card-flip_card card-flip_card-front">
+                            <img src="../../resources/images/img_tarocard.svg" alt="">
+                          </div>
+                          <div class="card-flip_card card-flip_card-back">
+                            <img src="../../resources/images/dummy/@card05.png" alt="">
+                          </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
+                        <div class="card-flip">
+                          <div class="card-flip_card card-flip_card-front">
+                            <img src="../../resources/images/img_tarocard.svg" alt="">
+                          </div>
+                          <div class="card-flip_card card-flip_card-back">
+                            <img src="../../resources/images/dummy/@card05.png" alt="">
+                          </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
+                        <div class="card-flip">
+                          <div class="card-flip_card card-flip_card-front">
+                            <img src="../../resources/images/img_tarocard.svg" alt="">
+                          </div>
+                          <div class="card-flip_card card-flip_card-back">
+                            <img src="../../resources/images/dummy/@card05.png" alt="">
+                          </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
+                      <div class="card-flip">
+                        <div class="card-flip_card card-flip_card-front">
+                          <img src="../../resources/images/img_tarocard.svg" alt="">
+                        </div>
+                        <div class="card-flip_card card-flip_card-back">
+                          <img src="../../resources/images/dummy/@card05.png" alt="">
+                        </div>
+                      </div>
                     </div>
                     <div class="swiper-slide">
-                        <button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
+                      <div class="card-flip">
+                        <div class="card-flip_card card-flip_card-front">
+                          <img src="../../resources/images/img_tarocard.svg" alt="">
+                        </div>
+                        <div class="card-flip_card card-flip_card-back">
+                          <img src="../../resources/images/dummy/@card05.png" alt="">
+                        </div>
+                      </div>
                     </div>
                     <div class="swiper-slide">
-                        <button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
+                      <div class="card-flip">
+                        <div class="card-flip_card card-flip_card-front">
+                          <img src="../../resources/images/img_tarocard.svg" alt="">
+                        </div>
+                        <div class="card-flip_card card-flip_card-back">
+                          <img src="../../resources/images/dummy/@card05.png" alt="">
+                        </div>
+                      </div>
                     </div>
                     <div class="swiper-slide">
-                        <button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
+                      <div class="card-flip">
+                        <div class="card-flip_card card-flip_card-front">
+                          <img src="../../resources/images/img_tarocard.svg" alt="">
+                        </div>
+                        <div class="card-flip_card card-flip_card-back">
+                          <img src="../../resources/images/dummy/@card05.png" alt="">
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
             <div class="cta-desc">카드를 눌러보세요</div>
+            <div class="card-info">
+              <p>현대 SSG.COM카드 Edition2</p>
+              <p>전 가맹점 최대 20% 적립</p>
+            </div>
           </div>
         </div>
         <!--// 마이데이터 연결 & AI추천 -->
@@ -319,22 +376,38 @@
         el: ".event-swipe .swiper-pagination",
       },
     });
-    var swiper1 = new Swiper("#topSwipe", {
-			loop: true,
-      loopAdditionalSlides: 1,
+    var taroSwiper = new Swiper("#topSwipe", {
 			effect: 'coverflow',
-			centeredSlides: true,
 			slidesPerView: 1.2,
 			coverflowEffect: {
 				rotate: 0,
-				stretch: 160,
-				depth: 120,
-				modifier: 1.5,
+				stretch: 200,
+				depth: 200,
+				modifier: 1,
 				slideShadows : false,
-			}
+			},
+      on: {
+        init: function(swiper) {
+          swiper.slideTo(swiper.slides.length / 2, false);
+        }
+      }
     });
 
-    console.log(swiper1)
+    $('.cta-desc').on('click', function(){
+      const slideArr = [];
+      for (let i = 0; i < taroSwiper.slides.length; i++) {
+        slideArr.push(i);
+      }
+      slideArr.splice(slideArr[taroSwiper.activeIndex], 1);
+      taroSwiper.removeSlide(slideArr);
+
+      $('.top-swipe .swiper-slide-active .card-flip').addClass('card-flip-rotate')
+
+      $('.flip-title-before').hide();
+      $('.flip-title-after').show();
+      $('.cta-desc').hide();
+      $('.card-info').show();
+    });
   </script>
 </body>
 
