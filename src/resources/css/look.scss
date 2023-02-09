@@ -110,6 +110,10 @@
 				&.main {
 					width: 100%;
 				}
+        strong {
+          font-weight: inherit;
+          color: #3383FD;
+        }
 			}
       button.image {
         width: 100%;
@@ -119,6 +123,11 @@
         img {
           max-width: px(297);
           max-height: px(421);
+        }
+      }
+      &-nomydata {
+        .content-title-box {
+          flex-direction: row;
         }
       }
     }

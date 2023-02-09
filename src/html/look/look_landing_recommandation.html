@@ -22,46 +22,22 @@
     <!-- container -->
     <div id="container" class="look-landing">
 
-      <section class="content head-content">
-        <!-- 마이데이터 연결 & AI추천 -->
+      <!-- 마이데이터 연결 전 -->
+      <section class="content head-content head-content-nomydata">
         <div class="content-title-box">
           <h2 class="content-title main">
-            <span>김해인</span>님의 <br>
-            이번 달 라운딩 가능성 87.3%
-            <div class="desc">20만원 아끼는 카드 여기있어요</div>
-						<div class="badge">AI 추천</div>
-          </h2>
-          <div class="content-title figure cta" style="width: 100%;">
-            <div id="topSwipe" class="swiper top-swipe">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-										<button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
-								</div>
-								<div class="swiper-slide">
-										<button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
-								</div>
-								<div class="swiper-slide">
-										<button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
-								</div>
-								<div class="swiper-slide">
-										<button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
-								</div>
-								<div class="swiper-slide">
-										<button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
-								</div>
-								<div class="swiper-slide">
-										<button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
-								</div>
-								<div class="swiper-slide">
-										<button type="button"><img src="../../resources/images/img_tarocard.svg"></button>
-								</div>
-							</div>
+            <strong>김연경</strong>님에게<br>
+            딱 맞는 카드 추천받기
+            <div class="btn-wrap">
+              <a href="#" class="link">마이데이터 연결이 필요해요</a>
             </div>
-            <div class="cta-desc">카드를 눌러보세요</div>
+          </h2>
+          <div class="image">
+            <img src="../../resources/images/icon_title_nomydata.svg" />
           </div>
         </div>
-        <!--// 마이데이터 연결 & AI추천 -->
       </section>
+      <!--// 마이데이터 연결 전 -->
 
       <section class="content look-event-content">
         <div class="event-head">
@@ -128,7 +104,7 @@
           </div>
 					<div class="list-item list-item-banner">
 						<div class="text">한 달, 최대 <strong>120만 원</strong> 만드는<br> 카드 이벤트 구경하기</div>
-						<div id="countUpNum" class="number">1200000</div>
+						<div class="number"><div>1</div><div>2</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div></div>
 					</div>
           <div class="list-item">
             <a href="#" class="event-link">
@@ -306,38 +282,37 @@
         el: ".event-swipe .swiper-pagination",
       },
     });
-    var swiper1 = new Swiper("#topSwipe", {
-      loop: true,
-      loopAdditionalSlides: 1,
-      effect: 'coverflow',
-      centeredSlides: true,
-      slidesPerView: 1.2,
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 160,
-        depth: 120,
-        modifier: 1.5,
-        slideShadows : false,
+    var taroSwiper = new Swiper("#topSwipe", {
+			effect: 'coverflow',
+			slidesPerView: 1.2,
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 200,
+				depth: 200,
+				modifier: 1,
+				slideShadows : false,
+			},
+      on: {
+        init: function(swiper) {
+          swiper.slideTo(swiper.slides.length / 2, false);
+        }
       }
     });
 
-    $('.number').each(function(){
-      const self = $(this);
-      let flag = true;
-      $(window).scroll(function(){
-        if ($(window).scrollTop() >= self.offset().top - $(window).height() && flag) {
-          self.prop('Counter',0).animate({
-            Counter: self.text()
-          }, {
-            duration: 700,
-            easing: 'swing',
-            step: function (now) {
-              self.text(Math.ceil(now).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-            }
-          });
-          flag = false;
-        }
-      });
+    $('.cta-desc').on('click', function(){
+      const slideArr = [];
+      for (let i = 0; i < taroSwiper.slides.length; i++) {
+        slideArr.push(i);
+      }
+      slideArr.splice(slideArr[taroSwiper.activeIndex], 1);
+      taroSwiper.removeSlide(slideArr);
+
+      $('.top-swipe .swiper-slide-active .card-flip').addClass('card-flip-rotate')
+
+      $('.flip-title-before').hide();
+      $('.flip-title-after').show();
+      $('.cta-desc').hide();
+      $('.card-info').show();
     });
   </script>
 </body>
