@@ -161,9 +161,26 @@
 				margin-top: px(21);
 			}
       &-nomydata {
-        padding-bottom: px(20);
+        padding-top: px(24);
+        padding-bottom: px(40);
         .content-title-box {
           flex-direction: row;
+          .content-title {
+            padding-right: px(8.5);
+            font-size: px(18);
+            line-height: px(26);
+          }
+          .figure {
+            flex-shrink: 0;
+            padding-right: px(8.5);
+          }
+        }
+        .btn-wrap .link {
+          line-height: px(20);
+          &::after {
+            width: px(20);
+            height: px(20);
+          }
         }
       }
     }
