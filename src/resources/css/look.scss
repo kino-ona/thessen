@@ -110,6 +110,10 @@
 				&.main {
 					width: 100%;
 				}
+        strong {
+          font-weight: inherit;
+          color: #3383FD;
+        }
 			}
       // button.image {
       //   width: 100%;
@@ -143,6 +147,11 @@
 				justify-content: center;
 				margin-top: px(21);
 			}
+      &-nomydata {
+        .content-title-box {
+          flex-direction: row;
+        }
+      }
     }
     .content-title-box {
 			.desc {
