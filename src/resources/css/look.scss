@@ -161,6 +161,7 @@
 				margin-top: px(21);
 			}
       &-nomydata {
+        padding-bottom: px(20);
         .content-title-box {
           flex-direction: row;
         }
@@ -756,6 +757,7 @@
 		}
 		.tablist-box.type3 {
 			height: px(47);
+      margin-top: 0;
 			background-color: transparent;
 			button {
 				font-size: px(16);
