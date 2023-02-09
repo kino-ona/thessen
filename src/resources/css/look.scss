@@ -111,16 +111,38 @@
 					width: 100%;
 				}
 			}
-      button.image {
+      // button.image {
+      //   width: 100%;
+      //   // margin-top: px(-45);
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   img {
+      //     max-width: px(297);
+      //     max-height: px(421);
+      //   }
+      // }
+			.image {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+				&_item {
+					&-hide {
+						display: none;
+					}
+				}
+
         img {
           max-width: px(297);
           max-height: px(421);
         }
       }
+			.card-img {
+				display: flex;
+				justify-content: center;
+				margin-top: px(21);
+			}
     }
     .content-title-box {
 			.desc {
@@ -173,6 +195,7 @@
           letter-spacing: -0.03em;
 				}				
 				img {
+					width: auto;
 					vertical-align: middle;
 				}
       }
@@ -189,6 +212,12 @@
         }
 			}
     }
+		.gift {
+			display: none;
+			.card-info {
+				display: block;
+			}
+		}
 		.flip-title-before ,
 		.flip-title-after {
       height: px(84);
