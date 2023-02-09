@@ -104,7 +104,7 @@
           </div>
 					<div class="list-item list-item-banner">
 						<div class="text">한 달, 최대 <strong>120만 원</strong> 만드는<br> 카드 이벤트 구경하기</div>
-						<div class="number"><div>1</div><div>2</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div></div>
+						<div id="countUpNum" class="number">1200000</div>
 					</div>
           <div class="list-item">
             <a href="#" class="event-link">
@@ -298,7 +298,24 @@
         }
       }
     });
-
+    $('.number').each(function(){
+      const self = $(this);
+      let flag = true;
+      $(window).scroll(function(){
+        if ($(window).scrollTop() >= self.offset().top - $(window).height() && flag) {
+          self.prop('Counter',0).animate({
+            Counter: self.text()
+          }, {
+            duration: 700,
+            easing: 'swing',
+            step: function (now) {
+              self.text(Math.ceil(now).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+            }
+          });
+          flag = false;
+        }
+      });
+    });
     $('.cta-desc').on('click', function(){
       const slideArr = [];
       for (let i = 0; i < taroSwiper.slides.length; i++) {
