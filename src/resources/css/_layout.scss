@@ -72,6 +72,14 @@
         background-size: px(14) auto;
       }
     }
+    &.btn-share {
+      margin-top: -1px;
+      right: 0;
+      i {
+        background: url(../images/icon_share-black.svg) center no-repeat;
+        background-size: px(24) auto;
+      }
+    }
     &.btn-set {
       left: auto;
       right: px(20);

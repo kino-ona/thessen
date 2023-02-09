@@ -15,6 +15,9 @@
   .default-white-color {
     @include default-white-color;
   }
+  .btn-unclickable {
+    background-color: #ADB2C5;
+  }
   .btn-view-more {
     height: px(64);
     border-top: px(1) solid #E5E9EF;
@@ -29,7 +32,17 @@
 			display: block;
 	}
   header.header {
+    height: px(52);
     background-color: transparent;
+    h1.page-tit {
+      font-weight: inherit;
+    }
+    .btn-back {
+      left: px(6);
+    }
+    .btn-share {
+      right: px(6);
+    }
     &-white {
 			h1 {
 				color:#fff;
@@ -1936,9 +1949,9 @@
 		.content-title {
 			span {
 				display: block;
-				font-size: px(18);
-				font-weight: 400;
-				line-height: px(27);
+				font-size: px(16);
+				font-weight: 700;
+				line-height: px(24);
 				letter-spacing: -0.03em;
 				text-align: left;
 			}
@@ -2565,6 +2578,7 @@
       }
     }
 		.event-list-content {
+      padding-top: 0;
 			padding-left: 0;
 			padding-right: 0;
 			.tab-content {
