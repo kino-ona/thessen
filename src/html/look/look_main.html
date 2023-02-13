@@ -411,7 +411,7 @@
 
 			<div id="pop-selectCard" class="drawer ly-drawer">
 				<div class="drawer-paper wrap">
-					<div class="drawer-content">
+					<div class="drawer-content select-content">
 						<div class="select" aria-selected="true">
 								<div>
 										<label for="card-all">나의 신용카드 전체</label>
@@ -719,6 +719,7 @@
     const tabButtonElemList = document.querySelectorAll('.tab-menu .tablist-box.type1 button');
     const sortButtonElemList = document.querySelectorAll('.tab-menu .tablist-box.type2 button');
     const tabContList = Array.from(document.querySelectorAll('.analysis-content .tab-content'));
+    const selContList = Array.from(document.querySelectorAll('.select-content .select'));
     tabButtonElemList.forEach(function (e) {
       e.addEventListener('click', function (e) {
         var targetIdx = e.currentTarget.getAttribute('aria-label');
@@ -738,6 +739,11 @@
         e.currentTarget.ariaSelected = 'true';
       })
     });
+    $('.select').on('click', function(){
+			var $this = $(this);
+      selContList.map( x => x.setAttribute('aria-selected', 'false') );
+			$this.attr('aria-selected', 'true');
+    })
 	</script>
 	<script>
     $('#scrollTrigger').on('click', function(){
@@ -747,10 +753,6 @@
         const isOpen = 'chart-detail--opened';
         const isClosed = 'chart-detail--closed';
         $(this).hasClass(isOpen) ? $(this).removeClass(isOpen).addClass(isClosed) : $(this).removeClass(isClosed).addClass(isOpen);
-    })
-    $('.select').on('click', function(){
-			var $this = $(this);
-			$this.attr('aria-selected')=='true' ? $this.attr('aria-selected', 'false') : $this.attr('aria-selected', 'true');
     })
     $('.checkbox').on('click', function(){
 			var $this = $(this);
