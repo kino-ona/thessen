@@ -88,7 +88,7 @@
 					</span>
 				</div>
 				<div class="content-title-wrap">
-					<h2 class="content-title sub">총 소비금액</h2>
+					<h2 class="content-title sub">신용카드 이용액</h2>
 					<span class="content-desc">
 							<div>3,690,770</div><div class="unit">원</div>
 					</span>
@@ -191,22 +191,22 @@
 								<div class="swiper-wrapper">
 									<!-- 업종별총혜택금액, 데이터가 없을 때 -->
 									<div class="swiper-slide">
-											<div class="content-top">
-													<div class="bar bar-0 nodata">
-															<div class="name">내 혜택</div>
-															<div class="fig" style="bottom: calc(1% + 32px);"><span>0</span><span class="unit">원</span></div>
-															<div class="stat" style="height: 1%;"></div><!-- min == 1%, max == 55% -->
-													</div>
-													<div class="bar bar-1">
-															<div class="name">30대 남성</div>
-															<div class="fig" style="bottom: calc(55% + 32px);"><span>74,235</span><span class="unit">원</span></div>
-															<div class="stat" style="height: 55%;"></div><!-- min == 1%, max == 55% -->
-													</div>
+										<div class="content-top">
+											<div class="bar bar-0 nodata">
+												<div class="name">내 혜택</div>
+												<div class="fig" style="bottom: calc(1% + 32px);"><span>0</span><span class="unit">원</span></div>
+												<div class="stat" style="height: 1%;"></div><!-- min == 1%, max == 55% -->
 											</div>
-											<div class="content-bottom">
-													<div class="title">&#9889;더쎈 꿀팁<!--U+26A1;--></div>
-													<p>때로는 한 장의 카드보다 여러 카드로 나눠 쓰는게 더 많은 혜택을 받을 수 있어요!</p>
+											<div class="bar bar-1">
+												<div class="name">30대 남성</div>
+												<div class="fig" style="bottom: calc(55% + 32px);"><span>74,235</span><span class="unit">원</span></div>
+												<div class="stat" style="height: 55%;"></div><!-- min == 1%, max == 55% -->
 											</div>
+										</div>
+										<div class="content-bottom">
+											<div class="title">&#9889;더쎈 꿀팁<!--U+26A1;--></div>
+											<p>때로는 한 장의 카드보다 여러 카드로 나눠 쓰는게 더 많은 혜택을 받을 수 있어요!</p>
+										</div>
 									</div>
 									<!--// 업종별총혜택금액, 데이터가 없을 때 -->
 									<!-- 업종별총혜택금액, 데이터가 있을 때 -->
@@ -324,76 +324,76 @@
 					<div class="tab-content" aria-label="0" aria-hidden="false">
 						<div class="usage-list">
 							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
-									<div class="item-bg">
-											<div class="bg" data-gage="0"></div>
-											<p class="item-logo"><img src="../../resources/images/ill_automob.svg"></p>
-									</div>
-									<p class="item-name">배달</p>
-									<div class="percent nodata"><strong>미보유</strong></div>
+								<div class="item-bg">
+									<div class="bg" data-gage="0"></div>
+									<p class="item-logo"><img src="../../resources/images/icon_cate11.svg" alt="배달"></p>
+								</div>
+								<p class="item-name">배달</p>
+								<div class="percent nodata"><strong>미보유</strong></div>
+							</button>
+							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
+								<div class="item-bg">
+									<div class="bg" data-gage="14"></div>
+									<p class="item-logo"><img src="../../resources/images/icon_cate07.svg" alt="대형마트"></p>
+								</div>
+								<p class="item-name">대형마트</p>
+								<div class="percent neg"><strong>14%</strong></div>
+							</button>
+							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
+								<div class="item-bg">
+									<div class="bg" data-gage="33"></div>
+									<p class="item-logo"><img src="../../resources/images/icon_cate21.svg" alt="커피"></p>
+								</div>
+								<p class="item-name">커피</p>
+								<div class="percent pos"><strong>33%</strong></div>
+							</button>
+							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
+								<div class="item-bg">
+									<div class="bg" data-gage="92"></div>
+									<p class="item-logo"><img src="../../resources/images/icon_cate23.svg" alt="편의점"></p>
+								</div>
+								<p class="item-name">편의점</p>
+								<div class="percent pos"><strong>92%</strong></div>
 							</button>
 							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
 									<div class="item-bg">
-											<div class="bg" data-gage="14"></div>
-											<p class="item-logo"><img src="../../resources/images/ill_canned-food.svg"></p>
-									</div>
-									<p class="item-name">대형마트</p>
-									<div class="percent neg"><strong>14%</strong></div>
+									<div class="bg" data-gage="82"></div>
+									<p class="item-logo"><img src="../../resources/images/icon_cate15.svg" alt="영화&amp;문화"></p>
+								</div>
+								<p class="item-name">영화&amp;문화</p>
+								<div class="percent pos"><strong>82%</strong></div>
 							</button>
 							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
-									<div class="item-bg">
-											<div class="bg" data-gage="33"></div>
-											<p class="item-logo"><img src="../../resources/images/ill_coffee.svg"></p>
-									</div>
-									<p class="item-name">커피</p>
-									<div class="percent pos"><strong>33%</strong></div>
-							</button>
-							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
-									<div class="item-bg">
-											<div class="bg" data-gage="92"></div>
-											<p class="item-logo"><img src="../../resources/images/ill_conv.svg"></p>
-									</div>
-									<p class="item-name">편의점</p>
-									<div class="percent pos"><strong>92%</strong></div>
-							</button>
-							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
-									<div class="item-bg">
-											<div class="bg" data-gage="82"></div>
-											<p class="item-logo"><img src="../../resources/images/ill_film.svg"></p>
-									</div>
-									<p class="item-name">영화&문화</p>
-									<div class="percent pos"><strong>82%</strong></div>
-							</button>
-							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
-									<div class="item-bg">
-											<div class="bg" data-gage="51"></div>
-											<p class="item-logo"><img src="../../resources/images/ill_taxi.svg"></p>
-									</div>
-									<p class="item-name">택시</p>
-									<div class="percent pos"><strong>51%</strong></div>
+								<div class="item-bg">
+									<div class="bg" data-gage="51"></div>
+									<p class="item-logo"><img src="../../resources/images/icon_cate05.svg" alt="택시"></p>
+								</div>
+								<p class="item-name">택시</p>
+								<div class="percent pos"><strong>51%</strong></div>
 							</button>
 							<button class="list-item list-item-unclickable" onclick="UI.popupOpen.init('usageRankList');">
-									<div class="item-bg">
-											<div class="bg" data-gage="100"></div>
-											<p class="item-logo"><img src="../../resources/images/ill_train.svg"></p>
-									</div>
-									<p class="item-name">대중교통</p>
-									<div class="percent pos"><strong>120%</strong></div>
+								<div class="item-bg">
+									<div class="bg" data-gage="100"></div>
+									<p class="item-logo"><img src="../../resources/images/icon_cate04.svg" alt="대중교통"></p>
+								</div>
+								<p class="item-name">대중교통</p>
+								<div class="percent pos"><strong>120%</strong></div>
 							</button>
 							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
-									<div class="item-bg">
-											<div class="bg" data-gage="0"></div>
-											<p class="item-logo"><img src="../../resources/images/ill_puppy.svg"></p>
-									</div>
-									<p class="item-name">반려동물</p>
-									<div class="percent nodata"><strong>미보유</strong></div>
+								<div class="item-bg">
+									<div class="bg" data-gage="0"></div>
+									<p class="item-logo"><img src="../../resources/images/icon_cate10.svg" alt="반려동물"></p>
+								</div>
+								<p class="item-name">반려동물</p>
+								<div class="percent nodata"><strong>미보유</strong></div>
 							</button>
 							<button class="list-item" onclick="UI.popupOpen.init('usageRankList');">
-									<div class="item-bg">
-											<div class="bg" data-gage="21"></div>
-											<p class="item-logo"><img src="../../resources/images/ill_paperwork.svg"></p>
-									</div>
-									<p class="item-name">관리비</p>
-									<div class="percent pos"><strong>21%</strong></div>
+								<div class="item-bg">
+									<div class="bg" data-gage="21"></div>
+									<p class="item-logo"><img src="../../resources/images/icon_cate02.svg" alt="관리비"></p>
+								</div>
+								<p class="item-name">관리비</p>
+								<div class="percent pos"><strong>21%</strong></div>
 							</button>
 						</div>
 					</div>

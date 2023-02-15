@@ -760,7 +760,7 @@
 						height: px(8);
 						display: inline-block;
 						position: absolute;
-						left: px(-2);
+						left: px(-4);
 						background-color: #E5E9EF;
 					}
 				}
@@ -1022,6 +1022,11 @@
 		section.content:last-of-type {
 			margin-bottom: px(36);
 		}
+		.content {
+			&:before {
+				display: none;
+			}
+		}
     .head-content {
       padding-top: px(52);
       padding-bottom: px(60);
@@ -1069,6 +1074,7 @@
 			padding-bottom: px(16);
 		}
     .content-title {
+			color: #202434;
 			text-align: left;
       &.main {
         padding-left: 0;
@@ -1137,7 +1143,7 @@
 					font-size: px(16);
           font-weight: 500;
 					line-height: px(20);
-					background-color: #E9EEFF;
+					background-color: #E9F2FF;
 					border-radius: px(6);
 				}
 			}
@@ -1145,12 +1151,16 @@
 
 		.chart-content {
       margin-bottom: px(24);
+			.content-title-wrap {
+				border-bottom: 0;
+			}
 			.content-title {
 				&.main {
 					font-size: px(22);
 					letter-spacing: -0.03em;
 				}
 				&.sub {
+					color: #3E4459;
 					font-weight: 400;
 				}
 			}
@@ -1194,7 +1204,7 @@
 			}
 			&-graph {
 				position: relative;
-				padding: px(16) 0 px(10);
+				padding: px(16) 0 0;
 				text-align: center;
 				.tip {
 					position: absolute;
@@ -1360,6 +1370,10 @@
 				.carousel-navi {
 					width: px(120);
 				}
+			}
+			.tablist-box {
+				border-radius: 12px;
+				padding: px(2) px(20) 0;
 			}
 		}
 
@@ -2292,7 +2306,7 @@
 			.link {
 				margin-top: px(5);
 				font-weight: 400;
-				color: #3E4459;
+				color: #202434;
 				&::after {
 					background: url(../images/icon_right_link.svg) center no-repeat;
 				}
@@ -2621,7 +2635,7 @@
 					padding-right: px(20);
 				}
 				.event-list {
-					padding-bottom: px(20);
+					padding-bottom: px(90);
 					.list-item {
 						padding: px(16) px(20);
 						border-bottom: 8px solid #F4F6F8;
@@ -2738,15 +2752,28 @@
 				}
 			}
       .carousel {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				background-color: #ffffff;
 				padding-top: px(7);
+				padding-bottom: px(30);
 				padding-left: px(20);
 				border-top: px(1) solid #F4F6F8;
+				.swiper-slide {
+					width: px(72) !important;
+					height: px(72);
+					margin-right: px(11);
+					&:last-child {
+						margin-right: 0;
+					}
+				}
 				.list-item {
 					position: relative;
 					display: block;
-					min-width: px(72);
-					min-height: px(72);
-					width: calc(25% - px(9));
+					width: 100%;
+					height: 100%;
 					padding-top: calc(25% - px(9));
 					border: px(1) solid #F4F6F8;
 					background-color: #fff;
