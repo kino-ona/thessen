@@ -20,9 +20,14 @@
  }
  .swiper-pagination-bullet {
   background-color: #E5E9EF;
-  margin-left: px(2);
-  margin-right: px(2);
+  margin-left: px(2) !important;
+  margin-right: px(2) !important;
   &.swiper-pagination-bullet-active {
     background-color: #202434;
   }
+ }
+ .swiper-horizontal > .swiper-pagination-bullets, 
+ .swiper-pagination-bullets.swiper-pagination-horizontal, 
+ .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 5px;
  }

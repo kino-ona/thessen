@@ -79,9 +79,17 @@
   .look-landing {
     padding-bottom: px(56);
 		overflow-x: hidden;
+		.look-event-content {
+			.btn-view-more {
+				width: calc(100% + 4rem);
+				margin-left: -2rem;
+				margin-top: px(20);
+				margin-bottom: -2rem;
+			}
+		}
 		.top-swipe {
       width: 100%;
-			max-width: 300px;
+			max-width: px(300);
 			.swiper-slide-active {
 				.card-flip-rotate {
 					animation-name: flip;
@@ -91,8 +99,8 @@
 			}
 			.card-flip {
 				position: relative;
-				width: 80px;
-				height: 120px;
+				width: px(86);
+				height: px(138);
 				margin: 0 auto;
 				// perspective: 100rem;
 				transform-style: preserve-3d;
@@ -292,6 +300,7 @@
         font-weight: 700;
         letter-spacing: -0.03em;
         text-align: center;
+				border-radius: px(8);
       }
 		}
 		.badge {
@@ -358,7 +367,7 @@
       justify-content: center;
       height: px(38);
       padding: 0 px(14);
-      background-color:#E9EEFF;
+      background-color:#E9F2FF;
       border-radius: px(12);
       font-size: px(14);
       font-weight: 700;
@@ -370,12 +379,12 @@
         display: grid;
         flex-wrap: wrap;
         align-items: center;
-        grid-template-columns: px(116) 1fr;
+        grid-template-columns: px(96) 1fr;
         grid-gap: px(20);
         margin-bottom: px(40);
       }
       .event-figure {
-        padding-top: px(149.5);
+        padding-top: px(149);
       }
       .info {
         &-rank {
@@ -492,7 +501,7 @@
 			}
     }
     .look-event-swipe {
-			padding-top: px(70);
+			padding-top: px(64);
       padding-bottom: px(24);
       .event-swipe {
         padding-bottom: px(40);
@@ -501,8 +510,8 @@
         text-align: center;
       }
       .event-figure {
-        max-width: px(91);
-        padding-top: px(144);
+        max-width: px(96);
+        padding-top: px(149);
         margin: 0 auto px(8);
       }
       .info {
@@ -533,10 +542,16 @@
           font-size: inherit;
         }
       }
+			.swiper-pagination {
+				left: 50%;
+			}
     }
     .cardcorp-content {
       padding: px(40) px(20);
       background-color: #F4F6F8;
+			&:before {
+				display: none;
+			}
       .content-title-box {
         padding-bottom: px(24);
       }
@@ -627,10 +642,11 @@
 				}
       }
 			&.figure {
+				max-width: px(240);
 				margin-top: px(48);
 				text-align: center;
         p {
-          margin-top: px(24);
+          margin-top: px(20);
           font-size: px(16);
           font-weight: 400;
           line-height: px(24);
@@ -644,7 +660,7 @@
       padding-top: px(20);
     }
     .title {
-      padding-top: px(22);
+      padding-top: px(20);
       margin-bottom: px(16);
       font-size: px(16);
       line-height: px(22);
@@ -908,20 +924,20 @@
 		padding-right: px(20);
     position: relative;
     .btn-close {
-      width: px(22);
-      height: px(22);
+      width: px(20);
+      height: px(20);
       position: absolute;
       right: px(20);
-      top: px(20);
+      top: px(16);
       font-size: 0;
       i {
         @include bgf;
-        width: px(22);
-        height: px(22);
+        width: px(20);
+        height: px(20);
       }
       i {
         background: url(../images/icon_close.svg) center no-repeat;
-        background-size: px(22) auto;
+        background-size: px(20) auto;
       }
     }
 		.title {
@@ -1392,8 +1408,6 @@
 			.swiper-pagination-bullet {
 				width: px(6);
 				height: px(6);
-				margin-left: 0.3rem;
-				margin-right: 0.3rem;
 			}
 			h3 {
 				font-size: px(18);
@@ -1997,7 +2011,7 @@
 			justify-content: center;
 			height: px(38);
 			padding: 0 px(14);
-			background-color:#E9EEFF;
+			background-color:#E9F2FF;
 			border-radius: px(12);
 			font-size: px(14);
 			font-weight: 700;
@@ -2406,7 +2420,7 @@
 				justify-content: center;
 				height: px(36);
 				padding: 0 px(12);
-				background-color:#E9EEFF;
+				background-color:#E9F2FF;
 				border-radius: px(12);
 				font-size: px(16);
 				font-weight: 700;
