@@ -54,3 +54,12 @@
   src: url('../fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'),
     url('../fonts/Montserrat/Montserrat-Bold.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 900;
+  font-style: normal;
+  src: url('../fonts/SUITE/SUITE-Heavy.woff2') format('woff2'),
+    url('../fonts/SUITE/SUITE-Heavy.woff') format('woff'),
+    url('../fonts/fonts/SUITE/SUITE-Heavy.otf') format('opentype');
+}

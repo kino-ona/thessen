@@ -943,6 +943,7 @@
 		.title {
 			width: 100%;
 			text-align: left;
+			color: #202434;
 		}
 	}
 
@@ -1125,7 +1126,7 @@
 		}
 
 		.tag-content {
-      padding-top: px(40);
+      padding-top: px(76);
       border-top: 0;
       .content-title-box {
 				flex-direction: column;
@@ -1596,7 +1597,7 @@
 		}
 		.usage-rank-list {
 			width: 100%;
-			padding-top: 2rem;
+			padding-top: 1rem;
 			.title {
 				font-weight: 400;
 			}
@@ -1610,7 +1611,7 @@
 					justify-content: space-between;
 				}
 				.th {
-					padding: 0 px(15) 0 0;
+					padding: 0 px(9) 0 0;
 					font-size: px(14);
 					font-weight: 400;
 					line-height: px(18);
@@ -1973,6 +1974,11 @@
 	}
 
 	.look-recommandation {
+		.content {
+			&::before {
+				display: none;
+			}
+		}
 		.head-content {
 			padding: px(16) 0;
 			position: relative;
@@ -2036,6 +2042,8 @@
     .look-event-content {
 			padding: px(32) px(24);
 			background-color: #F4F6F8;
+			border-top-right-radius: px(24);
+			border-top-left-radius: px(24);
 			.content-title * {
 				text-align: center;
 			}
@@ -2148,6 +2156,8 @@
 				}
 				.event-figure {
 					padding-top: px(64);
+					border-radius: px(4);
+					overflow: hidden;
 				}
         .event-info {
           padding-right: px(8);
@@ -2195,12 +2205,14 @@
 			}
 		}
 	}
-	#pop-cardApply {
+	div[id^=pop-cardApply] {
 		.drawer-content {
 			padding: px(40) px(20);
 		}
 		.title {
 			padding-left: px(4);
+			line-height: px(27);
+			font-size: px(18);
 		}
 		.item {
 			margin-top: px(16);
@@ -2329,6 +2341,9 @@
 
     .look-event-content {
 			padding-top: px(12);
+			&::before {
+				display: none;
+			}
 			.event-link {
 				color: #202434;
 			}

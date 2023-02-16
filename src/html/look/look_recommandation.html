@@ -50,7 +50,7 @@
 									</h4>
 								</div>
 								<div class="btn-wrap">
-									<button type="button" class="btn-action" onclick="UI.popupOpen.init('cardApply');">카드 비교</button>
+									<button type="button" class="btn-action" onclick="UI.popupOpen.init('cardApply01');">카드 비교</button>
 									<button type="button" class="btn-action">자세히 보기</button>
 								</div>
 							</div>
@@ -78,7 +78,7 @@
 							</div>
 							<div class="btn-wrap">
 								<p class="benefit-tag">13만원 캐시백</p>
-								<button type="button" class="btn-action" onclick="UI.popupOpen.init('cardApply');">카드 비교</button>
+								<button type="button" class="btn-action" onclick="UI.popupOpen.init('cardApply02');">카드 비교</button>
 							</div>
 						</a>
 					</div>
@@ -100,7 +100,7 @@
 							</div>
 							<div class="btn-wrap">
 								<p class="benefit-tag">13만원 캐시백</p>
-								<button type="button" class="btn-action" onclick="UI.popupOpen.init('cardApply');">카드 비교</button>
+								<button type="button" class="btn-action" onclick="UI.popupOpen.init('cardApply02');">카드 비교</button>
 							</div>
 						</a>
 					</div>
@@ -122,7 +122,7 @@
 							</div>
 							<div class="btn-wrap">
 								<p class="benefit-tag">12만원 캐시백</p>
-								<button type="button" class="btn-action" onclick="UI.popupOpen.init('cardApply');">카드 비교</button>
+								<button type="button" class="btn-action" onclick="UI.popupOpen.init('cardApply02');">카드 비교</button>
 							</div>
 						</a>
 					</div>
@@ -133,10 +133,10 @@
 				<button type="button" data-ui-fixed='bottom' class="btn-action">다시 선택하기</button>
 			</div>
 
-			<div id="pop-cardApply" class="drawer ly-drawer">
+			<div id="pop-cardApply01" class="drawer ly-drawer">
 				<div class="drawer-paper wrap">
 					<!-- 카드비교 클릭시 비교할 카드가 있을 때 -->
-					<div class="drawer-content" style="display: none;">
+					<div class="drawer-content">
             <h2 class="title">카드를<br>교체한다면?</h2>
 						<div class="item-wrap">
 							<div class="item">
@@ -154,8 +154,16 @@
 						</h2>
 					</div>
 					<!--// 카드비교 클릭시 비교할 카드가 있을 때 -->
+					<div class="btn-wrap">
+						<button type="button" onclick="UI.popupClose.init('cardApply01');" class="btn secondary">닫기</button>
+						<button type="button" onclick="UI.popupClose.init('cardApply01');" class="btn primary">신청하기</button>
+					</div>
+				</div>
+			</div>
+			<div id="pop-cardApply02" class="drawer ly-drawer">
+				<div class="drawer-paper wrap">
 					<!-- 카드비교 클릭시 비교할 카드가 없을 때 -->
-					<div class="drawer-content" style="display: block;">
+					<div class="drawer-content">
             <h2 class="title">카드를<br>발급한다면?</h2>
 						<div class="item">
 							<div class="event-figure"><img src="../../resources/images/dummy/@card04.png" /></div>
@@ -168,8 +176,8 @@
 					</div>
 					<!--// 카드비교 클릭시 비교할 카드가 없을 때 -->
 					<div class="btn-wrap">
-						<button type="button" onclick="UI.popupClose.init('cardApply');" class="btn secondary">닫기</button>
-						<button type="button" onclick="UI.popupClose.init('cardApply');" class="btn primary">신청하기</button>
+						<button type="button" onclick="UI.popupClose.init('cardApply02');" class="btn secondary">닫기</button>
+						<button type="button" onclick="UI.popupClose.init('cardApply02');" class="btn primary">신청하기</button>
 					</div>
 				</div>
 			</div>
