@@ -41,7 +41,7 @@
 			</section>
 
 			<!-- 소비내역 데이터가 없을 때 -->
-			<section class="content chart-content no-content-border">
+			<section class="content chart-content no-content-border" style="display: none;">
 				<div class="content-title-box">
 					<h2 class="content-title main">11월</h2>
 					<span>
@@ -58,7 +58,7 @@
 					<div class="chart-title">
 						아직 이번 달 소비내역이 없습니다.
 					</div>
-					<div class="chart-graph no-data">
+					<div class="chart-graph">
 						<img src="../../resources/images/nodata-chart.svg" />
 					</div>
 					<p class="chart-desc">전 달 소비내역을 확인해보세요</p>
@@ -117,13 +117,6 @@
 				</div>
 			</section>
 			<!--// 소비내역이 하나일 때 + 달력 월 설정 -->
-			<section class="content analysis-content tab-menu no-content-border">
-				<div class="tablist-box type1">
-					<button type="button" aria-label="0" aria-selected="true">총 혜택금액</button>
-					<button type="button" aria-label="1" aria-selected="false">업종별 혜택금액</button>
-					<button type="button" aria-label="2" aria-selected="false">보유카드 수</button>
-				</div>
-			</section>
 
 			<section class="content analysis-content tab-menu no-content-border">
 				<div class="tablist-box type1">
@@ -514,7 +507,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="pop-cardForYou" class="drawer ly-drawer">
+			<div id="pop-cardForYou" class="drawer ly-drawer" style="display:block">
 				<div class="drawer-paper wrap">
 					<div class="drawer-content">
 						<div class="wrap-scroll">
@@ -607,10 +600,8 @@
 					</div>
 					<div class="btn-wrap">
 						<button type="button" onclick="UI.popupClose.init('cardForYou');" class="btn secondary">취소</button>
-						<button type="button" class="btn primary">혜택 강화하기</button>
-						<!-- 버튼 비활성화 버전 
-              <button type="button" class="btn primary btn-unclickable">혜택 강화하기</button>
-              -->
+						<!-- <button type="button" class="btn primary">혜택 강화하기</button> -->
+            <button type="button" class="btn primary btn-unclickable">혜택 강화하기</button>
 					</div>
 				</div>
 			</div>		
@@ -829,12 +820,12 @@
 					pieHole: 0.45,
 					is3D: false,
 					chartArea: {
-						width: 186,
-						height: 186
+						width: 240,
+						height: 240
 					},
 					/* 전체크기 */
-					width: 240,
-					height: 240,
+					width: 300,
+					height: 300,
 					/* 차트에 레이블 표시 (percentage, value or label)*/
 					pieSliceText: 'label',
 					/* 꼬리표 제거 */
@@ -849,7 +840,6 @@
 					},
 					pieSliceText: 'none',
 					tooltip: {
-						isHtml: true,
 						text: 'percentage',
 						textStyle: {
 							fontSize: 14,
