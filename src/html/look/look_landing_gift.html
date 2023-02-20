@@ -158,7 +158,7 @@
             </a>
           </div>
 					<div class="list-item list-item-banner">
-						<div class="text">한 달, 최대 <strong>120만 원</strong> 만드는<br> 카드 이벤트 구경하기</div>
+						<div class="text">이번달 캐시백 EVENT<br><strong>최대 ???만 원</strong> 구경하기</div>
 						<div class="countar">
               <p id="countUpNum" class="number">120</p>
               <span>만 원</span>
@@ -354,24 +354,27 @@
 				slideShadows : false,
 			}
     });
-    $('.number').each(function(){
-      const self = $(this);
-      let flag = true;
-      $(window).scroll(function(){
-        if ($(window).scrollTop() >= self.offset().top - $(window).height() && flag) {
-          self.prop('Counter',0).animate({
-            Counter: self.text()
-          }, {
-            duration: 700,
-            easing: 'swing',
-            step: function (now) {
-              self.text(Math.ceil(now).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-            }
-          });
-          flag = false;
-        }
+    function numAni() {
+      $('.number').each(function(){
+        const self = $(this);
+        let flag = true;
+        self.prop('Counter',0).animate({
+          Counter: self.text()
+        }, {
+          duration: 700,
+          easing: 'swing',
+          step: function (now) {
+            self.text(Math.ceil(now).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+          }
+        });
+        flag = false;
       });
-    });
+    }
+    numAni();
+
+    // setTimeout(function(){
+    //   numAni();
+    // }, 3000);
     $('.cta-desc').on('click', function(){
       $('.image .image_item:first-child').addClass('image_item-hide').siblings('.image_item').removeClass('image_item-hide');
       setTimeout(function(){

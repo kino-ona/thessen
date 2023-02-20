@@ -2680,6 +2680,44 @@
 			}
 		}
   }
+
+	.content-noti {
+		width: 100%;
+		padding: px(20) px(20) px(40);
+		background-color: #F4F6F8;
+		.content-noti-title {
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-bottom: px(8);
+			font-size: px(16);
+			font-weight: 700;
+			line-height: px(20);
+			letter-spacing: -0.03em;
+			color: #202434;
+			&::before {
+				content: '';
+				width: px(24);
+				height: px(24);
+				flex-shrink: 0;
+				margin-right: px(6);
+				display: inline-flex;
+				background-image: url(../images/icon_info-circle-yellow.svg);
+				background: {
+					size: 100%;
+					position: center;
+					repeat: no-repeat;
+				}
+			}
+		}
+		.content-noti-text {
+			font-size: px(14);
+			line-height: px(20);
+			span {
+				color: #3383FD;
+			}
+		}
+	}
 	
 	.sns-share {
 		padding: px(23) px(33) px(18);
