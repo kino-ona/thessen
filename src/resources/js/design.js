@@ -353,3 +353,39 @@ $(function(){
     if (UI.hasJqueryObject(UI.$body.find("[data-scroll]"))) UI.scrollHeaderFixed.init();
 });
 
+// Header fixed
+$(document).ready(function () {
+    if($('.header').length > 0) headFixed();
+});
+
+function headFixed(){
+	var $header = $('.header'),
+        headerH = $header.outerHeight();
+    var $eventTab = $('.event-list-content .tab-menu');
+
+	var lastSt = 0;
+	$(window).scroll(function() {
+		var st = $(this).scrollTop();
+		if (st >= 1) {
+			$header.addClass('scroll-fixed');
+		}else{
+			$header.removeClass('scroll-fixed');
+		}
+
+        if($('.event-list-content .tab-menu').length > 0) {
+            if(st >= 1) {
+                $eventTab.find('.tablist-box').addClass('scroll-fixed');
+                $eventTab.find('.tablist-box').css({
+                    'top': headerH,
+                })
+            } else {
+                $eventTab.find('.tablist-box').removeClass('scroll-fixed');
+                $eventTab.find('.tablist-box').css({
+                    'top': 0,
+                })
+            }
+        }
+
+		lastSt = st;
+	});
+}
