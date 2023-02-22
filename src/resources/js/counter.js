@@ -1,5 +1,4 @@
 
-
 (function($) {
   $.fn.rollNumber = function(options) {
     let $self = this;

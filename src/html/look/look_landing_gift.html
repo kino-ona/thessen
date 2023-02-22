@@ -160,7 +160,7 @@
 					<div class="list-item list-item-banner">
 						<div class="text">이번달 캐시백 EVENT<br><strong>최대 ???만 원</strong> 구경하기</div>
 						<div class="countar">
-              <p id="countUpNum" class="number">999</p>
+              <p class="counter number" data-number="199"></p>
               <span>만 원</span>
             </div>
 					</div>
@@ -334,6 +334,7 @@
   <script src="../../resources/js/jquery-1.12.4.min.js"></script>
   <script src="../../resources/js/swiper-bundle.min.js"></script>
   <script src="../../resources/js/design.js"></script>
+  <script src="../../resources/js/counter.js"></script>
   <script>
     var swiper = new Swiper("#eventSwipe", {
       pagination: {
@@ -354,24 +355,20 @@
 				slideShadows : false,
 			}
     });
+    
     function numAni() {
-      $('.number').each(function(){
-        const self = $(this);
-        let flag = true;
-        self.prop('Counter',0).animate({
-          Counter: self.text()
-        }, {
-          duration: 2000,
-          easing: 'swing',
-          step: function (now) {
-            self.text(Math.ceil(now).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-          }
-        });
-        flag = false;
-        setTimeout(function(){
-          numAni();
-        }, 2200);
-      });
+      $('.counter').rollNumber({
+        number: '199',
+        speed: 2000,
+        fontStyle: {
+          size: 18,
+          color:'#ffffff',
+          weight: 700,
+        }
+      })
+      setTimeout(function(){
+        numAni();
+      }, 2600);
     }
     numAni();
 
