@@ -205,6 +205,8 @@
           .figure {
             flex-shrink: 0;
             padding-right: px(8.5);
+						width: px(80);
+						height: px(76);
           }
         }
         .btn-wrap .link {
@@ -334,7 +336,7 @@
 		.badge {
 			width: px(40);
 			height: px(55);
-			background-image: url(../images/icon_ai-recommand.svg);
+			background-image: url(../images/icon_ai-recommand.png);
 			background: {
 				size: px(40);
 				position: center center;
@@ -393,6 +395,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+			width: px(98);
       height: px(38);
       padding: 0 px(8);
       background-color:#E9F2FF;
@@ -578,6 +581,7 @@
       }
       .benefit-tag {
         display: block;
+				width: auto;
         height: initial;
         background-color: initial;
         padding: 0;
@@ -631,7 +635,13 @@
           top: 50%;
           left: 50%;
           transform:translate(-50%, -50%);
+					width: 100%;
         }
+				.item-logo {
+					width: px(40);
+					height: px(40);
+					margin: 0 auto;
+				}
       }
     } 
   }
@@ -1241,7 +1251,7 @@
 				width: px(24);
 				height: px(24);
 				display: inline-block;
-				background-image: url("../images/icon_calendar-search.svg");
+				background-image: url("../images/icon_calendar-search.png");
 				background: {
 					size: px(24);
 					position: center center;
@@ -2893,6 +2903,7 @@
 							border-radius: px(20);
 							img {
 								display: inline-block;
+								width: px(40);
 							}
 						}
 						.title {
